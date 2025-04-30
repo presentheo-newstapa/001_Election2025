@@ -29,19 +29,20 @@ export default function Card({name, party, claim, result, resultDetails, current
   }
 
   return (
-    <div className="block bg-white border border-[#D9D9D9] hover:border-[#6463FF] rounded-3xl hover:shadow-[0_0_30px_rgba(100,99,255,0.2)] transition-all duration-300 ease-in-out">
+    <div className="group bg-white border border-[#D9D9D9] hover:border-[#6463FF] rounded-3xl hover:shadow-[0_0_30px_rgba(100,99,255,0.2)] transition-all duration-300 ease-in-out">
       {/* 카드 상단 */}
       <div className="p-4">
         {/* 후보자 정보 */}
         <div className="flex gap-4">
           {/* 사진 */}
-          <div className="rounded-sm">
-            <Image 
-              width={80}
-              height={80}
+          <div className="rounded-xl overflow-hidden w-[80px] h-[80px] relative">
+            <Image
               src={`/images/candidate/${name}.png`}
               alt={"인물="+name}
+              width={80}
+              height={80}
             />
+            
           </div>
           {/* 소속 정당과 이름, 직책 */}
           <div className="flex flex-col justify-between gap-2">
@@ -93,7 +94,7 @@ export default function Card({name, party, claim, result, resultDetails, current
         {/* 관련기사와 원문 */}
         <div>
           <a 
-            className="block py-4 text-center"
+            className="block py-4 text-center group-hover:text-[#6463FF]"
             href={relatedArticleUrl}>관련 기사 보러가기 &nbsp;&nbsp;&nbsp;〉</a>
         </div>
       </div>
