@@ -67,7 +67,16 @@ const [isOpen, setIsOpen] = useState(false);
 
         {/* 카드 하단 */}
         <div className="text-center p-3 border border-transparent border-t-[#D9D9D9]" onClick={() => setIsOpen(!isOpen)}>
-            <button>{isOpen ? "접기" : "더보기 👉"}</button>
+            <button>
+                {isOpen ? "접기" : "더보기"}
+                <Image 
+                    src={isOpen? "/images/icon/chevron_up.svg" : "/images/icon/chevron_down.svg"}
+                    alt={isOpen? "접기" : "더보기"}
+                    width={20}
+                    height={17}
+                    className="inline-block ml-1"
+                />
+                </button>
         </div>
 
 
