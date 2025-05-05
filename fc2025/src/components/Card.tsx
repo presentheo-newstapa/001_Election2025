@@ -1,32 +1,8 @@
 import Image from "next/image";
+import { CardProps } from "@/types/props";
+import SafeImage from "./SafeImage";
 
-type CardProps = {
-  name: string;
-    party: string;
-    claim: string;
-    result: string;
-    resultDetails: string[];
-    currentPosition: string;
-    formerPosition: string;
-    relatedArticleUrl: string,
-    originalUrl: string,
-}
-
-export default function Card({name, party, claim, result, resultDetails, currentPosition, formerPosition, relatedArticleUrl, originalUrl}: CardProps){
-
-  // let partyLogo: string;
-  let partyColor: string = "";
-
-  if (party === "국민의힘") {
-      // partyLogo = "/logos/국민의힘.png";
-      partyColor = "#E61E2B"
-  } else if (party === "더불어민주당") {
-      // partyLogo = "/logos/더불어민주당.png";
-      partyColor = "#152484"
-  } else if (party === "개혁신당") {
-      // partyLogo = "/logos/개혁신당.png";
-      partyColor = "#FF7210"
-  }
+export default function Card({name, party, claim, result, resultDetails, position, relatedArticleUrl, selectedResult, handleFilteredData}: CardProps){
 
   return (
     <div className="group bg-white border border-[#D9D9D9] hover:border-[#6463FF] rounded-3xl hover:shadow-[0_0_30px_rgba(100,99,255,0.2)] transition-all duration-300 ease-in-out">
@@ -36,13 +12,16 @@ export default function Card({name, party, claim, result, resultDetails, current
         <div className="flex gap-4">
           {/* 사진 */}
           <div className="rounded-xl overflow-hidden w-[80px] h-[80px] relative">
-            <Image
+            <SafeImage
+              key={name}
+              className="cursor-pointer"
               src={`/images/candidate/${name}.png`}
               alt={"인물="+name}
               width={80}
               height={80}
+              onClick={() => handleFilteredData("인물", name, selectedResult)}
+              fallbackSrc = {'/images/candidate/def.jpg'}
             />
-            
           </div>
           {/* 소속 정당과 이름, 직책 */}
           <div className="flex flex-col justify-between gap-2">
@@ -53,16 +32,19 @@ export default function Card({name, party, claim, result, resultDetails, current
                   src={`/images/logo/${party}.png`}
                   alt={party}
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left cursor-pointer"
+                  onClick={() => handleFilteredData("정당", party, selectedResult)}
                 />
               </h3>
             </div>
             {/* 이름, 직책 */}
             <div>
-              <h3 className="text-xl font-bold">{name}</h3>
+              <h3 
+                className="text-xl font-bold cursor-pointer" 
+                onClick={() => handleFilteredData("인물", name, selectedResult)}
+              >{name}</h3>
               <h4 className="text-[#79797A]">
-                <span>{currentPosition}</span>{'/'}
-                <span>{formerPosition}</span>
+                <span>{position}</span>
               </h4>
             </div>
           </div>
@@ -71,7 +53,7 @@ export default function Card({name, party, claim, result, resultDetails, current
         <div className="bg-[#F1F1F9] rounded-lg p-4 pt-5 mt-2">
           {/* 검증 결과 */}
           <h2>
-            <span className="rounded-lg p-2 px-3 bg-[#6463FF] font-bold text-[#ffffff]">
+            <span className="rounded-lg p-2 px-3 bg-[#6463FF] font-bold text-[#ffffff]" onClick={() => handleFilteredData("인물", name, result)}>
               {result}
             </span>
           </h2>
@@ -80,7 +62,7 @@ export default function Card({name, party, claim, result, resultDetails, current
         </div>
         {/* 팩트체크 */}
         <div className="mt-5 px-2">
-          <ul className="list-disc list-outside pl-4">
+          <ul className="space-y-1">
             {resultDetails.map((item, index) => (
               <li key={index}>{item}</li>
             ))}

@@ -1,21 +1,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { CardProps } from "@/types/props";
+import SafeImage from './SafeImage';
 
-type MobileCardProps = {
-    name: string;
-    party: string;
-    claim: string;
-    result: string;
-    resultDetails: string[];
-    currentPosition: string;
-    formerPosition: string;
-    relatedArticleUrl: string,
-    originalUrl: string,
-}
-
-
-export default function MobileCard({name, party, claim, result, resultDetails, currentPosition, formerPosition, relatedArticleUrl, originalUrl}: MobileCardProps){
+export default function MobileCard({name, claim, result, resultDetails, handleFilteredData}: CardProps){
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -25,12 +14,15 @@ const [isOpen, setIsOpen] = useState(false);
         <div className="flex gap-3 p-4">
             {/* 사진 */}
             <div>
-                <Image
+                <SafeImage
+                    key={name}
                     src={`/images/candidate/${name}.png`}
                     alt={"인물="+name}
                     width={80}
                     height={80}
                     className="rounded-xl overflow-hidden w-[80px] h-[80px] relative"
+                    onClick={() => handleFilteredData("인물", name, "전체결과")}
+                    fallbackSrc = {''}
                 />
             </div>
             <div className="flex-auto">
