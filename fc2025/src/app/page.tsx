@@ -42,10 +42,6 @@ const creditList = [
 
 export default function Home() {
 
-  
-  // const router = useRouter();
-  // const [setSearchParams] = useSearchParams();
-
   // 모바일 미디어 쿼리
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   
@@ -53,7 +49,6 @@ export default function Home() {
   const rawData = useMemo(() => data, []); // 초기 데이터
 
   // 카테고리 필터링
-  // const [filteredData, setFilteredData] = useState(data);
   const [selectedCategory, setSelectedCategory] = useState("전체");
   const [selectedLegend, setSelectedLegend] = useState("전체");
   const [selectedResult, setSelectedResult] = useState("전체결과");
@@ -63,7 +58,6 @@ export default function Home() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const [filterCategory, setFilterCategory] = useState("전체");
-  // const elementRef = useRef<HTMLDivElement>(null);
 
   // 애니메이션 키
   const [animationKey, setAnimationKey] = useState(0);
