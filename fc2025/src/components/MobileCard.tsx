@@ -70,9 +70,6 @@ const [isOpen, setIsOpen] = useState(false);
                 />
                 </button>
         </div>
-
-
     </div>
-
   )
 }

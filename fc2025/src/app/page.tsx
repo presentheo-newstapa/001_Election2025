@@ -42,6 +42,10 @@ const creditList = [
 
 export default function Home() {
 
+  
+  // const router = useRouter();
+  // const [setSearchParams] = useSearchParams();
+
   // 모바일 미디어 쿼리
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   
@@ -72,7 +76,7 @@ export default function Home() {
     setSelectedLegend(legend);
     setSelectedResult(result);
   }
-  
+    
   // 선택한 카테고리에 따라 데이터 필터링
   const categoryFilteredData = useMemo(() => {
     if (selectedCategory === "전체") return rawData;
@@ -81,25 +85,38 @@ export default function Home() {
     return []; // Default to an empty array if no conditions are met
   }, [rawData, selectedCategory, selectedLegend]); 
 
+  // 필터링한 데이터를 검증 결과별로 다시 필터링
   const resultFilteredData = useMemo(() => {
     if (selectedResult === "전체결과") return categoryFilteredData;
     return categoryFilteredData.filter((item) => item.result === selectedResult);
   }, [categoryFilteredData, selectedResult]);
 
-  // useEffect(() => {
-
-  //     setFilteredData(resultFilteredData);
-  //   }, [resultFilteredData]
-  // );
 
   // 스크롤 시 메인 화면 감추기
   useEffect(() => {
-    const handleScroll = () => {if (window.scrollY > 0) {setIsInitialScreen(false);}}
-    window.addEventListener('scroll', handleScroll);
-    // 초기에도 한번 확인
-    handleScroll();
-    return () => {window.removeEventListener('scroll', handleScroll);};
+    const handleClick = () => setIsInitialScreen(false);
+    const handleWheel = () => setIsInitialScreen(false);
+    const handleTouchmove = () => setIsInitialScreen(false);
+    window.addEventListener('click', handleClick);
+    window.addEventListener('wheel', handleWheel);
+    window.addEventListener('touchmove', handleTouchmove);
+
+    // 초기화
+    return () => {
+      window.removeEventListener('click', handleClick);
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchmove', handleTouchmove);
+    };
   }, []);
+
+  // 초기화면에서 스크롤 잠금
+  useEffect(() => {
+    if (isInitialScreen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  })
 
   // 커스텀 훅
   // useEffect(() => {
@@ -117,11 +134,13 @@ export default function Home() {
 
   return (
     <div className="grid bg-[#FBFBFB]">
-      <main>
+      <main className={isInitialScreen ? "overflow-hidden" : "overflow-auto"}>
+
+        {/* 화면 진입시 초기 배너 */}
         <AnimatePresence>
           {isInitialScreen && 
             // 초기 화면에서는 메인 이미지 보여주기
-            <div className="fixed flex justify-center items-center top-0 h-screen w-full z-100 bg-[rgba(255,255,255,0.8)]">
+            <div id="mainBanner" className="fixed flex justify-center items-center top-0 h-screen w-full z-100 bg-[rgba(255,255,255,0.8)]">
               <motion.div
                 initial={{y:0, opacity:1}}
                 animate={{y:0, opacity:1}}

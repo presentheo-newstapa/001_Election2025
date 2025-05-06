@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   // output: "export",
   // basePath: "/2025/election2025_dev",
+  // images: {
+  //   unoptimized: true,
+  // },
   // assetPrefix : "/2025/election2025_dev",
 };
 
