@@ -22,13 +22,12 @@ const cardVariants = {
 
 // 정당과 후보 목록
 const partyList = [
-  {name: "국민의힘", color: "red"},
   {name: "더불어민주당", color: "blue"},
+  {name: "국민의힘", color: "red"},
   {name: "개혁신당", color: "orange"},
 ]
 const candidateList = [
   {name: "홍준표", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
-  // {name: "이재명", party: "더불어민주당", position: "대구광역시장", formerPosition: "대구광역시장",},
   {name: "이준석", party: "개혁신당", position: "대구광역시장", formerPosition: "대구광역시장",},
   {name: "전광훈", party: "자유통일당", position: "대구광역시장", formerPosition: "대구광역시장",},
   {name: "한동훈", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",}
@@ -139,7 +138,7 @@ export default function Home() {
                 initial={{y:0, opacity:1}}
                 animate={{y:0, opacity:1}}
                 exit={{
-                  y: [-40, 20, -700],
+                  y: [-40, 20, -1000],
                   opacity: [1,1,0]
                 }}
                 transition={{
@@ -177,7 +176,7 @@ export default function Home() {
           </div>
 
           {/* 상단 정보 */}
-          <div className="max-w-[1180px] mx-auto mt-[40px] p-4 pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-3xl">
+          <div className="max-w-[1180px] mx-auto p-4 pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-3xl">
             {/* 전체 보기 */}
             {selectedCategory === "전체" && (
               <div className="p-4 lg:p-8">
@@ -370,17 +369,10 @@ export default function Home() {
                       <div className="bg-white px-8 py-6 pb-7 rounded-t-3xl border border-[#DEDEDE] border-b-0">
                         <ul className="flex flex-wrap gap-4">
                           {partyList.map((item, index) => (
-                            <li 
-                              key={index} 
-                              className="relative w-[120px] h-[30px] cursor-pointer"
-                              onClick={() => handleFilteredData("정당", item.name, "전체결과")}
-                            >
-                              <Image
-                                src={`/images/logo/${item.name}.png`}
-                                alt={item.name}
-                                fill
-                                className="object-contain object-center"
-                              />
+                            <li key={index} >
+                              <button
+                                className={`p-2 px-6 border rounded-full hover:border-[#6664FF] cursor-pointer ${selectedLegend === item.name ? "bg-[#F1F1F9] border-[#6463FF]" : "bg-[#ffffff] border-[#D9D9D9]"}`}
+                                onClick={() => handleFilteredData("정당", item.name, "전체결과")}>{item.name}</button>
                             </li>
                           ))}
                         </ul>

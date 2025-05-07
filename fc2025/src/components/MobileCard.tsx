@@ -13,16 +13,16 @@ const [isOpen, setIsOpen] = useState(false);
         {/* 카드 상단 */}
         <div className="flex gap-3 p-4">
             {/* 사진 */}
-            <div>
+            <div className="flex-auto">
                 <SafeImage
                     key={name}
                     src={`/images/candidate/${name}.png`}
                     alt={"인물="+name}
                     width={80}
                     height={80}
-                    className="rounded-xl overflow-hidden w-[80px] h-[80px] relative"
+                    className="rounded-xl overflow-hidden relative"
                     onClick={() => handleFilteredData("인물", name, "전체결과")}
-                    fallbackSrc = {''}
+                    fallbackSrc = {'/images/candidate/def.jpg'}
                 />
             </div>
             <div className="flex-auto">
