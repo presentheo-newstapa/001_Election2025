@@ -176,7 +176,7 @@ export default function Home() {
           </div>
 
           {/* 상단 정보 */}
-          <div className="max-w-[1180px] mx-auto p-4 pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-3xl">
+          <div className="max-w-[1180px] mx-auto py-4 px-1 pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-3xl">
             {/* 전체 보기 */}
             {selectedCategory === "전체" && (
               <div className="p-4 lg:p-8">
@@ -205,7 +205,7 @@ export default function Home() {
             )}
             {/* 인물별 보기 */}
             {selectedCategory === "인물" && (
-              <div className="flex gap-4">
+              <div className="flex gap-4 p-4 lg:p-0">
                 {/* 인물 사진 */}
                 <div>
                   <SafeImage
@@ -250,11 +250,11 @@ export default function Home() {
             )}
 
             {/* 검증 결과 집계 */}
-            <div className="grid grid-cols-5 mt-4">
+            <div className="flex items-center mt-4">
               {["거짓","대체로 거짓","판단 유보","대체로 사실","사실"].map((item, index) => (
                 <div 
                   key={index} 
-                  className={`px-3 border rounded-xl cursor-pointer ${selectedResult === item ? "border-[#6463FF]" : "border-transparent"} `}
+                  className={`flex-1 px-1 border rounded-xl cursor-pointer ${selectedResult === item ? "border-[#6463FF]" : "border-transparent"} lg:px-3 lg:min-w-[100px]`}
                   onClick={() => {setSelectedResult(item);}}
                 >
                   <h3 className="text-sm lg:text-base text-center text-[#79797A]">{item}</h3>
