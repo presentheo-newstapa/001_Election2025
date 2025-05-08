@@ -27,15 +27,18 @@ export default function Card({name, party, claim, result, resultDetails, positio
           <div className="flex flex-col justify-between gap-2">
             {/* 소속 정당 */}
             <div>
-              <h3 className="relative w-full h-[15px]">
-                <Image
-                  src={`/images/logo/${party}.png`}
-                  alt={party}
-                  fill
-                  className="object-contain object-left cursor-pointer"
-                  onClick={() => handleFilteredData("정당", party, selectedResult)}
-                />
-              </h3>
+              {party !== "" && (
+                <h3 className="relative w-full h-[15px]">
+                  <Image
+                    src={`/images/logo/${party}.png`}
+                    alt={party}
+                    fill
+                    className="object-contain object-left cursor-pointer"
+                    onClick={() => handleFilteredData("정당", party, selectedResult)}
+                  />
+                </h3>
+
+              )}
             </div>
             {/* 이름, 직책 */}
             <div>

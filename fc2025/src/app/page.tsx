@@ -135,7 +135,7 @@ export default function Home() {
           {isInitialScreen && 
             // 초기 화면에서는 메인 이미지 보여주기
             <motion.div 
-              className="fixed top-0 w-full z-100 bg-[url(/images/mainbanner.jpg)] bg-cover lg:bg-contain bg-center"
+              className="fixed top-0 w-full h-screen z-100 backdrop-blur-sm"
               initial={{y:0, opacity:1}}
               animate={{y:0, opacity:1}}
               exit={{
@@ -147,27 +147,29 @@ export default function Home() {
                 ease: 'easeInOut'
               }}
             >
-              <Image
-                className="mt-[70px] lg:mt-[96px] mx-auto"
-                src="/images/main_banner_logo.png"
-                alt="2025 대선 팩트체크"
-                width={isMobile ? 260 : 390}
-                height={isMobile ? 95 : 142}
-                priority
-              />
-              <p className="text-base text-center whitespace-pre-line mt-[30px] lg:text-lg">
-                {isMobile 
-                  ? '오는 6월 3일, 21대 대통령 선거가 열립니다.\n매일 쏟아지는 대선 후보들의 발언들은 사실일까요?\n건강한 공론장을 위해 거짓이 사실로,\n사실이 거짓으로 둔갑하지 않도록 감시하겠습니다.'
-                  : 
-                  '오는 6월 3일, 21대 대통령 선거가 열립니다.\n매일 쏟아지는 대선 후보들의 발언들은 사실일까요? 거짓일까요?\n21대 대선 팩트체크를 위해 뉴스타파와 한국독립언론네트워크(KINN)가 뭉쳤습니다.\n건강한 공론장을 위해 거짓이 사실로, 사실이 거짓으로 둔갑하지 않도록 감시하겠습니다.'}</p>
-              <p className="text-sm text-center mt-[15px] text-[#79797A] lg:text-base"><a href="https://newstapa.org/">뉴스타파</a> X <a href="https://withnewstapa.org/kinn/">한국독립언론네트워크 KINN</a></p>
-              <Image
-                className="mt-[30px] mb-[35px] mx-auto animate-bounce"
-                src="/images/icon/arrow_down.svg"
-                alt="스크롤을 내려주세요"
-                width={26}
-                height={26}
-              />
+              <div className="absolute top-0 w-full bg-[url(/images/mainbanner.jpg)] bg-cover lg:bg-contain bg-center">
+                <Image
+                  className="mt-[70px] lg:mt-[96px] mx-auto"
+                  src="/images/main_banner_logo.png"
+                  alt="2025 대선 팩트체크"
+                  width={isMobile ? 260 : 390}
+                  height={isMobile ? 95 : 142}
+                  priority
+                />
+                <p className="text-base text-center whitespace-pre-line mt-[30px] lg:text-lg">
+                  {isMobile 
+                    ? '오는 6월 3일, 21대 대통령 선거가 열립니다.\n매일 쏟아지는 대선 후보들의 발언들은 사실일까요?\n건강한 공론장을 위해 거짓이 사실로,\n사실이 거짓으로 둔갑하지 않도록 감시하겠습니다.'
+                    : 
+                    '오는 6월 3일, 21대 대통령 선거가 열립니다.\n매일 쏟아지는 대선 후보들의 발언들은 사실일까요? 거짓일까요?\n21대 대선 팩트체크를 위해 뉴스타파와 한국독립언론네트워크(KINN)가 뭉쳤습니다.\n건강한 공론장을 위해 거짓이 사실로, 사실이 거짓으로 둔갑하지 않도록 감시하겠습니다.'}</p>
+                <p className="text-sm text-center mt-[15px] text-[#79797A] lg:text-base"><a href="https://newstapa.org/">뉴스타파</a> X <a href="https://withnewstapa.org/kinn/">한국독립언론네트워크 KINN</a></p>
+                <Image
+                  className="mt-[30px] mb-[35px] mx-auto animate-bounce"
+                  src="/images/icon/arrow_down.svg"
+                  alt="스크롤을 내려주세요"
+                  width={26}
+                  height={26}
+                />
+              </div>
             </motion.div>
           }
 
@@ -281,7 +283,7 @@ export default function Home() {
         </div>
 
         {/* 카드 그리드 */}
-        <div className="flex justify-center-safe">
+        <div className="flex justify-center-safe min-h-[50vh]">
           <motion.div 
             key = {animationKey}
             className="max-w-[1180px] grid grid-cols-12 gap-4 mt-3 lg:mt-8 lg:space-y-4"
