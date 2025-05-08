@@ -13,7 +13,7 @@ import data from "@/data/data.json";
 // 카드 애니메이션 사전 설정
 const containerVariants = {
   hidden: { opacity: 0 },
-  show: {opacity: 1, transition: {staggerChildren: 0.2}},
+  show: {opacity: 1, transition: {staggerChildren: 0.1}},
 };
 const cardVariants = {
   hidden: { opacity: 0, y: 50, rotate: -2 },
@@ -105,11 +105,14 @@ export default function Home() {
 
   // 초기화면에서 스크롤 잠금
   useEffect(() => {
-    if (isInitialScreen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
-    }
+    document.body.style.overflow = "hidden"
+    setTimeout(() => {
+      if (isInitialScreen) {
+        document.body.style.overflow = "hidden"
+      } else {
+        document.body.style.overflow = "auto"
+      }
+    }, 600)
   })
 
   // 커스텀 훅
@@ -143,7 +146,7 @@ export default function Home() {
                 opacity: [1,1,0]
               }}
               transition={{
-                duration: 0.8,
+                duration: 0.6,
                 ease: 'easeInOut'
               }}
             >

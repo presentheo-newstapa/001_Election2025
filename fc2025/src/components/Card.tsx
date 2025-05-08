@@ -61,7 +61,7 @@ export default function Card({name, party, claim, result, resultDetails, positio
             </span>
           </h2>
           {/* 주장 */}
-          <h1 className="mt-4 font-bold text-lg">&quot;{claim}&quot;</h1>
+          <h1 className="mt-4 font-bold text-lg">{claim}</h1>
         </div>
         {/* 팩트체크 */}
         <div className="mt-5 px-2">
