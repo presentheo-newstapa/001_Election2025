@@ -15,7 +15,7 @@ export default function Card({name, party, claim, result, resultDetails, positio
             <SafeImage
               key={name}
               className="cursor-pointer"
-              src={`/images/candidate/${name}.png`}
+              src={`/images/candidate/small/${name}.png`}
               alt={"인물="+name}
               width={80}
               height={80}
@@ -77,7 +77,16 @@ export default function Card({name, party, claim, result, resultDetails, positio
         <div>
           <a 
             className="block py-4 text-center group-hover:text-[#6463FF]"
-            href={relatedArticleUrl}>관련 기사 보러가기 &nbsp;&nbsp;&nbsp;〉</a>
+            href={relatedArticleUrl}>
+            <span>관련 기사 보러가기</span>
+            <Image
+              className="inline mt-[-2px] ml-1"
+              src="/images/icon/chevron_right.svg"
+              alt="이 링크를 누르면 관련 기사로 이동할 수 있습니다."
+              width={18}
+              height={18}
+            />
+          </a>
         </div>
       </div>
       {/* 카드 하단 끝 */}

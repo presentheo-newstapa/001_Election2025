@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "2025 대선 팩트체크",
   description: "뉴스타파 X 한국독립언론네트워크 KINN",
   keywords: "대통령, 선거, 대선, 대통령선거, 21대 대선, 팩트체크, 팩트, 뉴스타파, 한국독립언론네트워크, KINN",
+  icons: "/images/icon/favicon.png",
   openGraph: {
     title: "2025 대선 팩트체크",
     description: "뉴스타파 X 한국독립언론네트워크 KINN",

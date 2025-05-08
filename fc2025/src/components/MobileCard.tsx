@@ -13,10 +13,10 @@ const [isOpen, setIsOpen] = useState(false);
         {/* 카드 상단 */}
         <div className="flex gap-3 p-4">
             {/* 사진 */}
-            <div className="flex-auto">
+            <div className="shrink-0">
                 <SafeImage
                     key={name}
-                    src={`/images/candidate/${name}.png`}
+                    src={`/images/candidate/small/${name}.png`}
                     alt={"인물="+name}
                     width={80}
                     height={80}
@@ -25,7 +25,7 @@ const [isOpen, setIsOpen] = useState(false);
                     fallbackSrc = {'/images/candidate/def.jpg'}
                 />
             </div>
-            <div className="flex-auto">
+            <div className="grow">
                 {/* 이름, 검증 결과 */}
                 <div className="flex justify-between">
                     <h3 className="text-[#585858] font-semibold pt-1">{name}</h3>

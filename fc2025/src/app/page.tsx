@@ -30,7 +30,8 @@ const candidateList = [
   {name: "홍준표", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
   {name: "이준석", party: "개혁신당", position: "대구광역시장", formerPosition: "대구광역시장",},
   {name: "전광훈", party: "자유통일당", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "한동훈", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",}
+  {name: "한동훈", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
+  {name: "유정복", party: "국민의힘", position: "인천시장", formerPosition: "대구광역시장",}
 ]
 
 const creditList = [
@@ -133,28 +134,41 @@ export default function Home() {
         <AnimatePresence>
           {isInitialScreen && 
             // 초기 화면에서는 메인 이미지 보여주기
-            <div id="mainBanner" className="fixed flex justify-center items-center top-0 h-screen w-full z-100 bg-[rgba(255,255,255,0.8)]">
-              <motion.div
-                initial={{y:0, opacity:1}}
-                animate={{y:0, opacity:1}}
-                exit={{
-                  y: [-40, 20, -1000],
-                  opacity: [1,1,0]
-                }}
-                transition={{
-                  duration: 0.8,
-                  ease: 'easeInOut'
-                }}
-              >
-                <Image
-                  src="/images/main.png"
-                  alt="2025 대선 팩트체크"
-                  width={1000}
-                  height={200}
-                  priority
-                />
-              </motion.div>
-            </div>
+            <motion.div 
+              className="fixed top-0 w-full z-100 bg-[url(/images/mainbanner.jpg)] bg-cover lg:bg-contain bg-center"
+              initial={{y:0, opacity:1}}
+              animate={{y:0, opacity:1}}
+              exit={{
+                y: [-40, 20, -1000],
+                opacity: [1,1,0]
+              }}
+              transition={{
+                duration: 0.8,
+                ease: 'easeInOut'
+              }}
+            >
+              <Image
+                className="mt-[70px] lg:mt-[96px] mx-auto"
+                src="/images/main_banner_logo.png"
+                alt="2025 대선 팩트체크"
+                width={isMobile ? 260 : 390}
+                height={isMobile ? 95 : 142}
+                priority
+              />
+              <p className="text-base text-center whitespace-pre-line mt-[30px] lg:text-lg">
+                {isMobile 
+                  ? '오는 6월 3일, 21대 대통령 선거가 열립니다.\n매일 쏟아지는 대선 후보들의 발언들은 사실일까요?\n건강한 공론장을 위해 거짓이 사실로,\n사실이 거짓으로 둔갑하지 않도록 감시하겠습니다.'
+                  : 
+                  '오는 6월 3일, 21대 대통령 선거가 열립니다.\n매일 쏟아지는 대선 후보들의 발언들은 사실일까요? 거짓일까요?\n21대 대선 팩트체크를 위해 뉴스타파와 한국독립언론네트워크(KINN)가 뭉쳤습니다.\n건강한 공론장을 위해 거짓이 사실로, 사실이 거짓으로 둔갑하지 않도록 감시하겠습니다.'}</p>
+              <p className="text-sm text-center mt-[15px] text-[#79797A] lg:text-base"><a href="https://newstapa.org/">뉴스타파</a> X <a href="https://withnewstapa.org/kinn/">한국독립언론네트워크 KINN</a></p>
+              <Image
+                className="mt-[30px] mb-[35px] mx-auto animate-bounce"
+                src="/images/icon/arrow_down.svg"
+                alt="스크롤을 내려주세요"
+                width={26}
+                height={26}
+              />
+            </motion.div>
           }
 
         </AnimatePresence>
@@ -176,7 +190,7 @@ export default function Home() {
           </div>
 
           {/* 상단 정보 */}
-          <div className="max-w-[1180px] mx-auto p-4 pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-3xl">
+          <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-3xl">
             {/* 전체 보기 */}
             {selectedCategory === "전체" && (
               <div className="p-4 lg:p-8">
@@ -205,13 +219,13 @@ export default function Home() {
             )}
             {/* 인물별 보기 */}
             {selectedCategory === "인물" && (
-              <div className="flex gap-4">
+              <div className="flex gap-4 px-5 lg:px-0">
                 {/* 인물 사진 */}
                 <div>
                   <SafeImage
                     key={selectedLegend}
                     className="cursor-pointer rounded-3xl"
-                    src={`/images/candidate/${selectedLegend}.png`}
+                    src={`/images/candidate/big/${selectedLegend}.png`}
                     alt={selectedLegend}
                     width={isMobile ? 120 : 150}
                     height={isMobile ? 120 : 150}
@@ -237,7 +251,7 @@ export default function Home() {
                   <div>
                     {/* 후보 이름 */}
                     <h1 
-                      className="text-4xl font-bold cursor-pointer" 
+                      className="text-3xl font-bold cursor-pointer lg:text-4xl" 
                       onClick={() => handleFilteredData("인물", selectedLegend, "전체결과")}
                     >{selectedLegend}</h1>
                     {/* 후보 직책 */}
@@ -250,15 +264,15 @@ export default function Home() {
             )}
 
             {/* 검증 결과 집계 */}
-            <div className="grid grid-cols-5 mt-4">
+            <div className="items-center grid grid-cols-5 mt-4">
               {["거짓","대체로 거짓","판단 유보","대체로 사실","사실"].map((item, index) => (
                 <div 
                   key={index} 
-                  className={`px-3 border rounded-xl cursor-pointer ${selectedResult === item ? "border-[#6463FF]" : "border-transparent"} `}
+                  className={`px-1 pt-1 border rounded-xl cursor-pointer ${selectedResult === item ? "border-[#6463FF]" : "border-transparent"} lg:px-2 lg:pt-2`}
                   onClick={() => {setSelectedResult(item);}}
                 >
                   <h3 className="text-sm lg:text-base text-center text-[#79797A]">{item}</h3>
-                  <p className="text-center font-bold text-[40px] lg:text-[50px]">{categoryFilteredData.filter(data => data.result === item ).length}</p>
+                  <p className={`text-center font-bold text-[40px] lg:text-[50px] ${selectedResult === item ? "text-[#6463FF]" : ""}`}>{categoryFilteredData.filter(data => data.result === item ).length}</p>
                 </div>
               ))}
             </div>
@@ -315,7 +329,16 @@ export default function Home() {
               </motion.div>
             ))}
             {resultFilteredData.length === 0 && (
-              <div className="col-span-12 text-center py-[180px] text-lg">검색 결과가 없습니다.<br/>다른 조건으로 검색하시거나, 페이지를 새로고침 해주세요.</div>
+              <div className="col-span-12 text-center pt-[80px] pb-[160px]">
+                <Image
+                  className="m-auto"
+                  src="/images/icon/no_search_result.png"
+                  alt="검색 결과가 없습니다."
+                  width={300}
+                  height={240}
+                />
+                <p>검색 결과가 없습니다.<br/>다른 조건으로 검색하시거나, 페이지를 새로고침 해주세요.</p>
+              </div>
             )}
           </motion.div>
         </div>
@@ -353,7 +376,7 @@ export default function Home() {
                               onClick={() => handleFilteredData("인물", item.name, "전체결과")}
                             >
                               <Image
-                                src={`/images/candidate/${item.name}.png`}
+                                src={`/images/candidate/small/${item.name}.png`}
                                 alt={item.name}
                                 width={80}
                                 height={80}
