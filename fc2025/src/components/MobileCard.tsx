@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CardProps } from "@/types/props";
 import SafeImage from './SafeImage';
 
-export default function MobileCard({name, claim, result, resultDetails, handleFilteredData}: CardProps){
+export default function MobileCard({name, claim, result, resultDetails, relatedArticleUrl, handleFilteredData}: CardProps){
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -50,8 +50,19 @@ const [isOpen, setIsOpen] = useState(false);
                         transition={{ duration: 0.2 }}
                     >
                         <ul>{resultDetails.map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li key={index} className="mt-1">{item}</li>
                         ))}</ul>
+                        <a 
+                            className="block mt-3 text-right font-bold"
+                            href={relatedArticleUrl}>관련 기사 보러가기
+                            <Image
+                                className="inline"
+                                src="/images/icon/chevron_right.svg"
+                                alt="오른쪽 화살표"
+                                width={18}
+                                height={18}
+                            />
+                        </a>
                     </motion.div>
                 )}
             </AnimatePresence>

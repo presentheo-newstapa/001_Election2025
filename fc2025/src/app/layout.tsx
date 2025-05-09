@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://pages.newstapa.org/2025/factcheck2025",
     images: [
       {
-        url: "/images/share-banner_1200_logoX.jpg",
+        url: "https://pages.newstapa.org/2025/factcheck2025/images/share-banner_1200_logoX.jpg",
         width: 1200,
         height: 630,
         alt: "뉴스타파 - 2025 대선 팩트체크 썸네일"
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '2025 대선 팩트체크',
     description: '뉴스타파 X 한국독립언론네트워크 KINN',
-    images: ['/images/share-banner_800_logoX.jpg'],    
+    images: ['https://pages.newstapa.org/2025/factcheck2025/images/share-banner_800_logoX.jpg'],    
   }
 };
 
