@@ -242,16 +242,19 @@ export default function Home() {
                 <div className="flex flex-col justify-between">
                   <div>
                     {/* 정당 로고 */}
-                    <h3>
-                      <Image
-                        className="object-contain object-left cursor-pointer"
-                        src={`/images/logo/${categoryFilteredData[0].party}.png`}
-                        alt={categoryFilteredData[0].party}
-                        width={80}
-                        height={30}
-                        onClick={() => handleFilteredData("정당", categoryFilteredData[0].party, "전체결과")}
-                      />
-                    </h3>
+                    {categoryFilteredData[0].party !== "" && (
+                      <h3>
+                        <Image
+                          className="object-contain object-left cursor-pointer"
+                          src={`/images/logo/${categoryFilteredData[0].party}.png`}
+                          alt={categoryFilteredData[0].party}
+                          width={80}
+                          height={30}
+                          onClick={() => handleFilteredData("정당", categoryFilteredData[0].party, "전체결과")}
+                        />
+                      </h3>
+
+                    )}
                   </div>
                   <div>
                     {/* 후보 이름 */}
