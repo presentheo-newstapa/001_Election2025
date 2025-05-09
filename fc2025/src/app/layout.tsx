@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,6 +32,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      {/* GA4 세팅 */}
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-YMC350F0TN`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YMC350F0TN');
+          `}
+        </Script>
+      </head>
+      {/* 본문 */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
