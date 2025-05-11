@@ -131,7 +131,7 @@ export default function Home() {
 
   return (
     <div className="grid bg-[#FBFBFB]">
-      <main className={isInitialScreen ? "overflow-hidden" : "overflow-auto"}>
+      <main>
 
         {/* 화면 진입시 초기 배너 */}
         <AnimatePresence>
