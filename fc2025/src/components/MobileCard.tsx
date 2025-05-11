@@ -9,7 +9,7 @@ export default function MobileCard({name, claim, result, resultDetails, relatedA
 const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-auto mx-2 bg-white border border-[#D9D9D9] hover:border-[#6463FF] rounded-2xl hover:shadow-[0_0_30px_rgba(100,99,255,0.2)] transition-all duration-300 ease-in-out">
+    <div className="w-auto mx-2 bg-white border border-[#D9D9D9] hover:border-[#6463FF] rounded-[15px] hover:shadow-[0_0_30px_rgba(100,99,255,0.2)] transition-all duration-300 ease-in-out">
         {/* 카드 상단 */}
         <div className="flex gap-3 p-4">
             {/* 사진 */}
@@ -20,7 +20,7 @@ const [isOpen, setIsOpen] = useState(false);
                     alt={"인물="+name}
                     width={80}
                     height={80}
-                    className="rounded-xl overflow-hidden relative"
+                    className="rounded-[10px] overflow-hidden relative"
                     onClick={() => handleFilteredData("인물", name, "전체결과")}
                     fallbackSrc = {'/images/candidate/def.jpg'}
                 />
@@ -29,7 +29,7 @@ const [isOpen, setIsOpen] = useState(false);
                 {/* 이름, 검증 결과 */}
                 <div className="flex justify-between">
                     <h3 className="text-[#585858] font-semibold pt-1">{name}</h3>
-                    <h2 className="rounded-lg p-1 px-3 bg-[#6463FF] font-bold text-[#ffffff]">{result}</h2>
+                    <h2 className="rounded-[8px] p-1 px-3 bg-[#6463FF] font-bold text-[#ffffff]">{result}</h2>
                 </div>
                 {/* 주장 */}
                 <div className="mt-2">
