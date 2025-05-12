@@ -131,7 +131,7 @@ export default function Home() {
 
   return (
     <div className="grid bg-[#FBFBFB]">
-      <main className={isInitialScreen ? "overflow-hidden" : "overflow-auto"}>
+      <main>
 
         {/* 화면 진입시 초기 배너 */}
         <AnimatePresence>
@@ -195,7 +195,7 @@ export default function Home() {
           </div>
 
           {/* 상단 정보 */}
-          <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-3xl">
+          <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-[20px]">
             {/* 전체 보기 */}
             {selectedCategory === "전체" && (
               <div className="p-4 lg:p-8">
@@ -229,7 +229,7 @@ export default function Home() {
                 <div>
                   <SafeImage
                     key={selectedLegend}
-                    className="cursor-pointer rounded-3xl"
+                    className="cursor-pointer rounded-[20px]"
                     src={`/images/candidate/big/${selectedLegend}.png`}
                     alt={selectedLegend}
                     width={isMobile ? 120 : 150}
@@ -276,7 +276,7 @@ export default function Home() {
               {["거짓","대체로 거짓","판단 유보","대체로 사실","사실"].map((item, index) => (
                 <div 
                   key={index} 
-                  className={`px-1 pt-1 border rounded-xl cursor-pointer ${selectedResult === item ? "border-[#6463FF]" : "border-transparent"} lg:px-2 lg:pt-2`}
+                  className={`px-1 pt-1 border rounded-[15px] cursor-pointer ${selectedResult === item ? "border-[#6463FF]" : "border-transparent"} lg:px-2 lg:pt-2`}
                   onClick={() => {setSelectedResult(item);}}
                 >
                   <h3 className="text-sm lg:text-base text-center text-[#79797A]">{item}</h3>
@@ -375,7 +375,7 @@ export default function Home() {
                     transition={{ duration: 0.1 }}
                   >
                     {filterCategory === "인물" && (
-                      <div className="bg-white p-4 pb-7 rounded-t-3xl border border-[#DEDEDE] border-b-0">
+                      <div className="bg-white p-4 pb-7 rounded-t-[20px] border border-[#DEDEDE] border-b-0">
                         <ul className="flex flex-wrap gap-4 justify-center">
                           {candidateList.map((item, index) => (
                             <li 
@@ -388,7 +388,7 @@ export default function Home() {
                                 alt={item.name}
                                 width={80}
                                 height={80}
-                                className={`rounded-xl overflow-hidden border-2 ${selectedLegend === item.name ? "border-[#6463FF]" : "border-transparent"}`}
+                                className={`rounded-[10px] overflow-hidden border-2 ${selectedLegend === item.name ? "border-[#6463FF]" : "border-transparent"}`}
                               />
                               <h5 className="mt-1 font-semibold">{item.name}</h5>
                             </li>
@@ -397,7 +397,7 @@ export default function Home() {
                       </div>
                     )}
                     {filterCategory === "정당" && (
-                      <div className="bg-white px-8 py-6 pb-7 rounded-t-3xl border border-[#DEDEDE] border-b-0">
+                      <div className="bg-white px-8 py-6 pb-7 rounded-t-[20px] border border-[#DEDEDE] border-b-0">
                         <ul className="flex flex-wrap gap-4">
                           {partyList.map((item, index) => (
                             <li key={index} >
@@ -430,7 +430,7 @@ export default function Home() {
           <div className="fixed bottom-0 w-full">
             {/* 모바일 필터 버튼 */}
             <div className="flex justify-center py-8" style={{background: "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F1F1F9 100%)"}}>
-              <button className="bg-[#6463FF] p-4 m-auto shadow-md rounded-2xl" onClick={() => setMobileFilterOpen(!mobileFilterOpen)}>
+              <button className="bg-[#6463FF] p-4 m-auto shadow-md rounded-[15px]" onClick={() => setMobileFilterOpen(!mobileFilterOpen)}>
                 <Image
                   src={mobileFilterOpen ? "/images/icon/filter_close.svg" : "/images/icon/filter_open.svg"}
                   alt="필터 아이콘"
