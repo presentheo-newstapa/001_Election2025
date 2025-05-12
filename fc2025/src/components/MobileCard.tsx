@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CardProps } from "@/types/props";
 import SafeImage from './SafeImage';
 
-export default function MobileCard({name, claim, result, resultDetails, relatedArticleUrl, handleFilteredData}: CardProps){
+export default function MobileCard({name, claim, result, resultDetails, relatedArticleUrl, originalUrl, handleFilteredData}: CardProps){
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -33,7 +33,9 @@ const [isOpen, setIsOpen] = useState(false);
                 </div>
                 {/* 주장 */}
                 <div className="mt-2">
-                    <h1 className="text-lg font-bold">{claim}</h1>
+                    <h1 className="text-lg font-bold">
+                        {originalUrl === "" ? claim : <a href={originalUrl} target="_blank">{claim}</a>}
+                    </h1>
                 </div>
             </div>
         </div>
@@ -52,17 +54,19 @@ const [isOpen, setIsOpen] = useState(false);
                         <ul>{resultDetails.map((item, index) => (
                             <li key={index} className="mt-1">{item}</li>
                         ))}</ul>
-                        <a 
-                            className="block mt-3 text-right font-bold"
-                            href={relatedArticleUrl}>관련 기사 보러가기
-                            <Image
-                                className="inline"
-                                src="/images/icon/chevron_right.svg"
-                                alt="오른쪽 화살표"
-                                width={18}
-                                height={18}
-                            />
-                        </a>
+                        {relatedArticleUrl === "" ? "" : 
+                            <a 
+                                className="block mt-3 text-right font-bold"
+                                href={relatedArticleUrl}>관련 기사 보러가기
+                                <Image
+                                    className="inline"
+                                    src="/images/icon/chevron_right.svg"
+                                    alt="오른쪽 화살표"
+                                    width={18}
+                                    height={18}
+                                />
+                            </a>
+                        }
                     </motion.div>
                 )}
             </AnimatePresence>

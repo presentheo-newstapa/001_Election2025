@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CardProps } from "@/types/props";
 import SafeImage from "./SafeImage";
 
-export default function Card({name, party, claim, result, resultDetails, position, relatedArticleUrl, selectedResult, handleFilteredData}: CardProps){
+export default function Card({name, party, claim, result, resultDetails, position, relatedArticleUrl, selectedResult, originalUrl, handleFilteredData}: CardProps){
 
   return (
     <div className="group bg-white border border-[#D9D9D9] hover:border-[#6463FF] rounded-[20px] hover:shadow-[0_0_30px_rgba(100,99,255,0.2)] transition-all duration-300 ease-in-out">
@@ -61,7 +61,9 @@ export default function Card({name, party, claim, result, resultDetails, positio
             </span>
           </h2>
           {/* 주장 */}
-          <h1 className="mt-4 font-bold text-lg">{claim}</h1>
+          <h1 className="mt-4 font-bold text-lg">
+            {originalUrl === "" ? claim : <a href={originalUrl} target="_blank">{claim}</a>}
+          </h1>
         </div>
         {/* 팩트체크 */}
         <div className="mt-5 px-2">
@@ -75,23 +77,25 @@ export default function Card({name, party, claim, result, resultDetails, positio
       {/* 카드 상단 끝 */}
 
       {/* 카드 하단 */}
-      <div className="border border-transparent border-t-inherit">
-        {/* 관련기사와 원문 */}
-        <div>
-          <a 
-            className="block py-4 text-center group-hover:text-[#6463FF]"
-            href={relatedArticleUrl}>
-            <span>관련 기사 보러가기</span>
-            <Image
-              className="inline mt-[-2px] ml-1"
-              src="/images/icon/chevron_right.svg"
-              alt="이 링크를 누르면 관련 기사로 이동할 수 있습니다."
-              width={18}
-              height={18}
-            />
-          </a>
+      {relatedArticleUrl == "" ? "" : 
+        <div className="border border-transparent border-t-inherit">
+          {/* 관련기사와 원문 */}
+          <div>
+            <a 
+              className="block py-4 text-center group-hover:text-[#6463FF]"
+              href={relatedArticleUrl}>
+              <span>관련 기사 보러가기</span>
+              <Image
+                className="inline mt-[-2px] ml-1"
+                src="/images/icon/chevron_right.svg"
+                alt="이 링크를 누르면 관련 기사로 이동할 수 있습니다."
+                width={18}
+                height={18}
+              />
+            </a>
+          </div>
         </div>
-      </div>
+      }
       {/* 카드 하단 끝 */}
     </div>
   )

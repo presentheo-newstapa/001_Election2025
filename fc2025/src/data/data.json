@@ -1,22 +1,22 @@
 [
   {
-    "index": 1,
+    "index": 0,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
     "claim": "여성 교감·교장 절반 넘었듯 ‘유리천장’은 시간 지나면 해소?",
     "resultDetails": [
-      "여성 교원 신규임용 늘어도 여성 교감 승진 비율은 늘 뒤쳐져",
+      "여성 교원 신규임용 늘어도 여성 교감 승진 비율은 늘 뒤처져",
       "교원·공무원 등 특수직종으로 '유리천장' 반론은 궤변",
       "통계청, 남녀 임금 격차 31%, OECD 평균 2.6배",
       "'이코노미스트', 한국 유리천장 지수 OECD 최하위권"
     ],
     "result": "대체로 거짓",
     "relatedArticleUrl": "https://newstapa.org/article/H-t7_",
-    "originalUrl": ""
+    "originalUrl": "https://www.youtube.com/watch?v=GMT3fsE1Zmk"
   },
   {
-    "index": 2,
+    "index": 1,
     "party": "국민의힘",
     "name": "한동훈",
     "position": "전 대표",
@@ -29,10 +29,10 @@
     ],
     "result": "판단 유보",
     "relatedArticleUrl": "https://newstapa.org/article/hIDII",
-    "originalUrl": ""
+    "originalUrl": "https://www.youtube.com/watch?v=44pLjogh35E"
   },
   {
-    "index": 3,
+    "index": 2,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -45,10 +45,10 @@
     ],
     "result": "판단 유보",
     "relatedArticleUrl": "https://newstapa.org/article/9iuU5",
-    "originalUrl": ""
+    "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared"
   },
   {
-    "index": 4,
+    "index": 3,
     "party": "",
     "name": "전광훈",
     "position": "사랑제일교회 목사",
@@ -64,7 +64,7 @@
     "originalUrl": ""
   },
   {
-    "index": 5,
+    "index": 4,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -77,10 +77,10 @@
     ],
     "result": "거짓",
     "relatedArticleUrl": "https://newstapa.org/article/67Kmz",
-    "originalUrl": ""
+    "originalUrl": "https://www.youtube.com/watch?v=gN3Omx5sqWA&ab_channel=TV%ED%99%8D%EC%B9%B4%EC%BD%9C%EB%9D%BC"
   },
   {
-    "index": 6,
+    "index": 5,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -93,13 +93,13 @@
     ],
     "result": "대체로 거짓",
     "relatedArticleUrl": "https://newstapa.org/article/gfXeu",
-    "originalUrl": ""
+    "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared"
   },
   {
-    "index": 7,
+    "index": 6,
     "party": "국민의힘",
     "name": "유정복",
-    "position": "전 인천시장",
+    "position": "인천시장",
     "claim": "스스로 '청백리'라는 유정복, 진짜일까?",
     "resultDetails": [
       "경기 시흥 배곧신도시 상가 약 22억 원 영끌 매입",
@@ -111,26 +111,26 @@
     "originalUrl": ""
   },
   {
-    "index": 8,
+    "index": 7,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
     "claim": "국민연금이 중국 등 외국인 노동자들의 노후 대책?",
     "resultDetails": [
-      "외국인 노동자들은 본국 돌아가서 국민연급 추납 불가능",
+      "외국인 노동자들은 본국 돌아가서 국민연금 추납 불가능",
       "중국인이 반환일시금 반납하고 추납까지?",
       "중국인은 반환일시금 지급 대상에서 제외",
       "한국인도 중국, 미국, 캐나다에서 일하면 그 나라 연금 가입 후 혜택"
     ],
     "result": "대체로 거짓",
     "relatedArticleUrl": "https://newstapa.org/article/7G340",
-    "originalUrl": ""
+    "originalUrl": "https://www.youtube.com/watch?v=k2IlJGYranI&ab_channel=%EC%8B%9C%EC%82%AC%EC%A0%80%EB%84%90TV"
   },
   {
-    "index": 9,
+    "index": 8,
     "party": "국민의힘",
     "name": "유정복",
-    "position": "전 인천시장",
+    "position": "인천시장",
     "claim": "유정복 인천시장, 탄핵 찬반 표명한 적 없다?",
     "resultDetails": [
       "2024년 12월 6일 탄핵 반대 발표",
@@ -143,7 +143,7 @@
     "originalUrl": ""
   },
   {
-    "index": 10,
+    "index": 9,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -159,7 +159,7 @@
     "originalUrl": ""
   },
   {
-    "index": 11,
+    "index": 10,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -171,6 +171,6 @@
     ],
     "result": "대체로 거짓",
     "relatedArticleUrl": "https://newstapa.org/article/eHBKq",
-    "originalUrl": ""
+    "originalUrl": "https://www.facebook.com/story.php?story_fbid=9542374109210241&id=100003132417627&rdid=c5ZMbBayDh1fCci2#"
   }
 ]
