@@ -116,7 +116,6 @@ export default function Home() {
 
   // 초기화면에서 스크롤 잠금
   useEffect(() => {
-    document.body.style.overflow = "hidden"
     setTimeout(() => {
       if (isInitialScreen) {
         document.body.style.overflow = "hidden"
@@ -160,10 +159,10 @@ export default function Home() {
                 ease: 'easeInOut'
               }}
             >
-              <div className="absolute top-0 w-full bg-[url(/images/mainbanner.jpg)] bg-cover lg:bg-contain bg-center">
+              <div className="absolute top-0 w-full bg-[url(/2025/factcheck2025/images/mainbanner.jpg)] bg-cover lg:bg-contain bg-center">
                 <Image
                   className="mt-[70px] lg:mt-[96px] mx-auto"
-                  src="/images/main_banner_logo.png"
+                  src="/2025/factcheck2025/images/main_banner_logo.png"
                   alt="2025 대선 팩트체크"
                   width={isMobile ? 260 : 390}
                   height={isMobile ? 95 : 142}
@@ -177,7 +176,7 @@ export default function Home() {
                 <p className="text-sm text-center mt-[15px] text-[#79797A] lg:text-base"><a href="https://newstapa.org/">뉴스타파</a> X <a href="https://withnewstapa.org/kinn/">한국독립언론네트워크 KINN</a></p>
                 <Image
                   className="mt-[30px] mb-[35px] mx-auto animate-bounce"
-                  src="/images/icon/arrow_down.svg"
+                  src="/2025/factcheck2025/images/icon/arrow_down.svg"
                   alt="스크롤을 내려주세요"
                   width={26}
                   height={26}
@@ -194,7 +193,7 @@ export default function Home() {
           <div className="flex justify-between max-w-[1180px] mx-auto">
             <h1 className="cursor-pointer" onClick={() => handleFilteredData("전체", "전체", "전체결과")}>
               <Image
-                src={'/images/header_logo.png'}
+                src={'/2025/factcheck2025/images/header_logo.png'}
                 alt="2025 대선 팩트체크"
                 width={isMobile ? 130 : 280}
                 height={44}
@@ -207,13 +206,13 @@ export default function Home() {
         {/* 스크롤 내리면 헤더 보여주기 */}
         <div>
           {/* 상단 정보 */}
-          <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-[20px]">
+          <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/2025/factcheck2025/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-[20px]">
             {/* 전체 보기 */}
             {selectedCategory === "전체" && (
               <div className="p-4 lg:p-8">
                 <Image 
                   className="m-auto cursor-pointer"
-                  src="/images/all_candidates.png" 
+                  src="/2025/factcheck2025/images/all_candidates.png" 
                   alt={selectedLegend} 
                   width={240} 
                   height={60} 
@@ -226,7 +225,7 @@ export default function Home() {
               <div className="p-4 lg:p-8">
                 <Image 
                   className="m-auto cursor-pointer"
-                  src={`/images/logo/${selectedLegend}.png`} 
+                  src={`/2025/factcheck2025/images/logo/${selectedLegend}.png`} 
                   alt={selectedLegend} 
                   width={200} 
                   height={150} 
@@ -242,12 +241,12 @@ export default function Home() {
                   <SafeImage
                     key={selectedLegend}
                     className="cursor-pointer rounded-[20px]"
-                    src={`/images/candidate/big/${selectedLegend}.png`}
+                    src={`/2025/factcheck2025/images/candidate/big/${selectedLegend}.png`}
                     alt={selectedLegend}
                     width={isMobile ? 120 : 150}
                     height={isMobile ? 120 : 150}
                     onClick={() => {handleFilteredData("인물", selectedLegend, "전체결과")}} 
-                    fallbackSrc={'/images/candidate/def.jpg'}
+                    fallbackSrc={'/2025/factcheck2025/images/candidate/def.jpg'}
                   />
                 </div>
                 {/* 정당과 인물 정보 */}
@@ -258,7 +257,7 @@ export default function Home() {
                       <h3>
                         <Image
                           className="object-contain object-left cursor-pointer"
-                          src={`/images/logo/${categoryFilteredData[0].party}.png`}
+                          src={`/2025/factcheck2025/images/logo/${categoryFilteredData[0].party}.png`}
                           alt={categoryFilteredData[0].party}
                           width={80}
                           height={30}
@@ -354,7 +353,7 @@ export default function Home() {
               <div className="col-span-12 text-center pt-[80px] pb-[160px]">
                 <Image
                   className="m-auto"
-                  src="/images/icon/no_search_result.png"
+                  src="/2025/factcheck2025/images/icon/no_search_result.png"
                   alt="검색 결과가 없습니다."
                   width={300}
                   height={240}
@@ -399,7 +398,7 @@ export default function Home() {
                               onClick={() => handleFilteredData("인물", item.name, "전체결과")}
                             >
                               <Image
-                                src={`/images/candidate/small/${item.final ? item.name + "_final" : item.name}.png`}
+                                src={`/2025/factcheck2025/images/candidate/small/${item.final ? item.name + "_final" : item.name}.png`}
                                 alt={item.name}
                                 width={80}
                                 height={80}
@@ -447,7 +446,7 @@ export default function Home() {
             <div className="flex justify-center py-8" style={{background: "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F1F1F9 100%)"}}>
               <button className="bg-[#6463FF] p-4 m-auto shadow-md rounded-[15px]" onClick={() => setMobileFilterOpen(!mobileFilterOpen)}>
                 <Image
-                  src={mobileFilterOpen ? "/images/icon/filter_close.svg" : "/images/icon/filter_open.svg"}
+                  src={mobileFilterOpen ? "/2025/factcheck2025/images/icon/filter_close.svg" : "/2025/factcheck2025/images/icon/filter_open.svg"}
                   alt="필터 아이콘"
                   width={23}
                   height={23}
