@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   keywords: "대통령, 선거, 대선, 대통령선거, 21대 대선, 팩트체크, 팩트, 뉴스타파, 한국독립언론네트워크, KINN",
   icons: "https://pages.newstapa.org/2025/factcheck2025/images/icon/favicon.png",
   openGraph: {
-    title: "2025 대선 팩트체크",
-    description: "뉴스타파 X 한국독립언론네트워크 KINN",
+    title: "2025 대선 팩트체크 - 뉴스타파 X 한국독립언론네트워크 KINN",
+    description: "대선 후보들의 발언, 사실일까 거짓일까? 뉴스타파와 한국독립언론네트워크(KINN)가 팩트체크를 위해 뭉쳤습니다.",
     url: "https://pages.newstapa.org/2025/factcheck2025",
     images: [
       {
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '뉴스타파 X 한국독립언론네트워크 KINN',
+    title: '2025 대선 팩트체크 - 뉴스타파 X 한국독립언론네트워크 KINN',
     description: "대선 후보들의 발언, 사실일까 거짓일까? 뉴스타파와 한국독립언론네트워크(KINN)가 팩트체크를 위해 뭉쳤습니다.",
-    images: ['https://pages.newstapa.org/2025/factcheck2025/images/share-banner_800_logoX.jpg'],    
+    images: ['https://pages.newstapa.org/2025/factcheck2025/images/share-banner_1200_logoX.jpg'],    
   }
 };
 
