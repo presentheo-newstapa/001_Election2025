@@ -27,13 +27,13 @@ const partyList = [
   {name: "개혁신당", color: "orange"},
 ]
 const candidateList = [
-  {name: "이재명", party: "더불어민주당", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "김문수", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "이준석", party: "개혁신당", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "홍준표", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "한동훈", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "유정복", party: "국민의힘", position: "인천시장", formerPosition: "대구광역시장",},
-  {name: "전광훈", party: "자유통일당", position: "대구광역시장", formerPosition: "대구광역시장",}
+  {name: "이재명", party: "더불어민주당", final: true },
+  {name: "김문수", party: "국민의힘", final: true },
+  {name: "이준석", party: "개혁신당", final: true },
+  {name: "홍준표", party: "국민의힘", final: false },
+  {name: "한동훈", party: "국민의힘", final: false },
+  {name: "유정복", party: "국민의힘", final: false },
+  {name: "전광훈", party: "자유통일당", final: false }
 ]
 
 const creditList = [
@@ -143,7 +143,6 @@ export default function Home() {
   return (
     <div className="grid bg-[#FBFBFB]">
       <main>
-
         {/* 화면 진입시 초기 배너 */}
         <AnimatePresence>
           {isInitialScreen && 
@@ -190,21 +189,23 @@ export default function Home() {
         </AnimatePresence>
 
         {/* 스크롤 내리면 헤더 보여주기 */}
-        <div>
-          <div className="sticky top-0 w-full bg-[rgba(241,241,249,0.8)] pt-2 pb-3 px-3 opacity-100 z-auto lg:px-0">
-            <div className="flex justify-between max-w-[1180px] mx-auto">
-              <h1 className="cursor-pointer" onClick={() => handleFilteredData("전체", "전체", "전체결과")}>
-                <Image
-                  src={'/images/header_logo.png'}
-                  alt="2025 대선 팩트체크"
-                  width={isMobile ? 130 : 280}
-                  height={44}
-                />
-              </h1>
-              <p className="text-xs content-center text-[#79797A] lg:text-base"><a href="https://newstapa.org/">뉴스타파</a> X <a href="https://withnewstapa.org/kinn/">한국독립언론네트워크 KINN</a></p>
-            </div>
-          </div>
 
+        <div className="sticky top-0 w-full bg-[rgba(241,241,249,0.8)] pt-2 pb-3 px-3 opacity-100 z-100 lg:px-0">
+          <div className="flex justify-between max-w-[1180px] mx-auto">
+            <h1 className="cursor-pointer" onClick={() => handleFilteredData("전체", "전체", "전체결과")}>
+              <Image
+                src={'/images/header_logo.png'}
+                alt="2025 대선 팩트체크"
+                width={isMobile ? 130 : 280}
+                height={44}
+              />
+            </h1>
+            <p className="text-xs content-center text-[#79797A] lg:text-base"><a href="https://newstapa.org/">뉴스타파</a> X <a href="https://withnewstapa.org/kinn/">한국독립언론네트워크 KINN</a></p>
+          </div>
+        </div>
+
+        {/* 스크롤 내리면 헤더 보여주기 */}
+        <div>
           {/* 상단 정보 */}
           <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-[20px]">
             {/* 전체 보기 */}
@@ -389,6 +390,7 @@ export default function Home() {
                   >
                     {filterCategory === "인물" && (
                       <div className="bg-white p-4 pb-7 rounded-t-[20px] border border-[#DEDEDE] border-b-0">
+                        {/* 인물별 보기 리스트 */}
                         <ul className="flex flex-wrap gap-2 justify-center">
                           {candidateList.map((item, index) => (
                             <li 
@@ -397,7 +399,7 @@ export default function Home() {
                               onClick={() => handleFilteredData("인물", item.name, "전체결과")}
                             >
                               <Image
-                                src={`/images/candidate/small/${item.name}.png`}
+                                src={`/images/candidate/small/${item.final ? item.name + "_final" : item.name}.png`}
                                 alt={item.name}
                                 width={80}
                                 height={80}
@@ -506,7 +508,7 @@ export default function Home() {
 
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center py-12 pb-30">
-        <ul className="flex gap-2">
+        <ul className="flex flex-wrap gap-2 justify-center">
           {creditList.map((item, index) => (
             <li key={index} className="text-sm">
               <span className="text-[#79797A]">{item.name}</span> <span className="font-semibold">{item.person}</span>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CardProps } from "@/types/props";
 import SafeImage from './SafeImage';
 
-export default function MobileCard({name, claim, result, resultDetails, relatedArticleUrl, originalUrl, handleFilteredData}: CardProps){
+export default function MobileCard({name, claim, result, resultDetails, relatedArticleUrl, originalUrl, resultList, handleFilteredData}: CardProps){
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -29,7 +29,7 @@ const [isOpen, setIsOpen] = useState(false);
                 {/* 이름, 검증 결과 */}
                 <div className="flex justify-between">
                     <h3 className="text-[#585858] font-semibold pt-1">{name}</h3>
-                    <h2 className="rounded-[8px] p-1 px-3 bg-[#6463FF] font-bold text-[#ffffff]">{result}</h2>
+                    <h2 style={{backgroundColor: resultList.find((item) => item.name === result)?.color}} className="rounded-[8px] p-1 px-3 font-bold text-[#ffffff]">{result}</h2>
                 </div>
                 {/* 주장 */}
                 <div className="mt-2">

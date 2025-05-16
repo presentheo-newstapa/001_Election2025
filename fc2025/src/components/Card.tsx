@@ -33,6 +33,7 @@ export default function Card({name, party, claim, result, resultDetails, positio
                     src={`/images/logo/${party}.png`}
                     alt={party}
                     fill
+                    sizes="(max-width: 320px) 15px"
                     className="object-contain object-left cursor-pointer"
                     onClick={() => handleFilteredData("정당", party, selectedResult)}
                   />
