@@ -1,6 +1,100 @@
 [
   {
     "index": 0,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "하루 8시간 일하고 세계적 반도체 기술 앞설 수 없다?",
+    "resultDetails": [
+      "반도체 매출 기준 '세계 4위' 기업 SK하이닉스",
+      "- '평균 주 43시간 근무'에 주말, 휴일 근무도 권장 안 해",
+      "- 구성원 행복·만족도 상승 위해 선택적 근로시간제 시행",
+      "- 최근 실적은 주 64시간 특별연장근로하는 삼성전자 앞질러"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "",
+    "originalUrl": "https://www.youtube.com/live/EDFhtuK0MVQ?feature=shared&t=2489"
+  },
+  {
+    "index": 1,
+    "party": "더불어민주당",
+    "name": "이재명",
+    "position": "대선후보",
+    "claim": "반도체 업종 ‘주 64시간’ 특별연장근로 6개월 연장, 문제 없다?",
+    "resultDetails": [
+      "노동부 고시 과로사 인정 기준 '12주 평균 60시간' 위반",
+      "국제노동기구·유럽연합은 '주 48시간' 근로시간 제한",
+      "삼성전자 특별연장근로 대상자들 \"새벽 2시 넘어서도 일해\"",
+      "과로 문제 악화 우려하는 현장 목소리 높아져"
+    ],
+    "result": "대체로 거짓",
+    "relatedArticleUrl": "",
+    "originalUrl": "https://www.youtube.com/live/_pBM17bz5JA?feature=shared&t=3421"
+  },
+  {
+    "index": 2,
+    "party": "개혁신당",
+    "name": "이준석",
+    "position": "대선후보",
+    "claim": "여성가족부 주 업무가 게임 산업 규제? ",
+    "resultDetails": [
+      "게임 산업 규제 업무는 문화체육관광부 소관",
+      "게임 셧다운제 폐지(2021년)후 여가부는 청소년 치유 정책 담당",
+      "담당공무원 2명 뿐…관련 예산도 57억 원으로 전체의 0.3% 불과"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "",
+    "originalUrl": "https://www.youtube.com/live/VQX_SIBcCJU?si=7JGSJBv466UhvsGw&t=1110"
+  },
+  {
+    "index": 3,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "경기도 청렴도 16위에서 1위로 만들었다?",
+    "resultDetails": [
+      "국민권익위, 공공기관 대상 청렴도 평가",
+      "-경기도 2007년 16위, 2011년과 14년 1위",
+      "-김문수 후보 경기도 지사 재임기간(2006~2014)중 2번 1위"
+    ],
+    "result": "대체로 사실",
+    "relatedArticleUrl": "",
+    "originalUrl": "https://www.youtube.com/live/VfzI7KcQr18?si=21Dxicr1BWq2cPfp&t=2865"
+  },
+  {
+    "index": 4,
+    "party": "더불어민주당",
+    "name": "이재명",
+    "position": "대선후보",
+    "claim": "경기도 연천군 청산면, 농촌기본소득 지급했더니 인구가 늘었다?",
+    "resultDetails": [
+      "인구소멸 위험지역 경기도 연천군 청산면",
+      "-22년부터 4년째 농촌기본소득 1인당 월 15만 원 지급",
+      "시행 전 인구 3,895명…현재 인구 4,037명. 3.5% 늘어",
+      "같은 기간 연천군 전체 인구는 4.3% 감소"
+    ],
+    "result": "사실",
+    "relatedArticleUrl": "",
+    "originalUrl": "https://www.youtube.com/live/QYu8Yum_vZM?si=YVEhX8i13R3rpUSC&t=1588"
+  },
+  {
+    "index": 5,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "그린벨트 해제 권한 취임 한 달 내 지방정부 이양?",
+    "resultDetails": [
+      "그린벨트 해제 권한은 국토교통부 장관에게 있음",
+      "지자체장에게 이양하려면 개발제한구역법 개정 필수",
+      "야당이 국회 과반인 상황에서 법 개정 현실적으로 불가능",
+      "더불어민주당은 그린벨트 해제 확대에 신중한 입장"
+    ],
+    "result": "대체로 거짓",
+    "relatedArticleUrl": "",
+    "originalUrl": "https://www.youtube.com/live/IJui47ArUvc?si=iiFrbIR_A9lHaMaE&t=1315"
+  },
+  {
+    "index": 6,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -13,10 +107,10 @@
     ],
     "result": "대체로 거짓",
     "relatedArticleUrl": "https://newstapa.org/article/H-t7_",
-    "originalUrl": "https://www.youtube.com/watch?v=GMT3fsE1Zmk"
+    "originalUrl": "https://www.youtube.com/live/GMT3fsE1Zmk?si=SsCBterEDpPzKKhn&t=6598"
   },
   {
-    "index": 1,
+    "index": 7,
     "party": "국민의힘",
     "name": "한동훈",
     "position": "전 대표",
@@ -29,10 +123,10 @@
     ],
     "result": "판단 유보",
     "relatedArticleUrl": "https://newstapa.org/article/hIDII",
-    "originalUrl": "https://www.youtube.com/watch?v=44pLjogh35E"
+    "originalUrl": "https://youtu.be/44pLjogh35E?si=eGgmGN41wSVxTfGN&t=695"
   },
   {
-    "index": 2,
+    "index": 8,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -45,10 +139,10 @@
     ],
     "result": "판단 유보",
     "relatedArticleUrl": "https://newstapa.org/article/9iuU5",
-    "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared"
+    "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1173"
   },
   {
-    "index": 3,
+    "index": 9,
     "party": "",
     "name": "전광훈",
     "position": "사랑제일교회 목사",
@@ -64,7 +158,7 @@
     "originalUrl": ""
   },
   {
-    "index": 4,
+    "index": 10,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -77,10 +171,10 @@
     ],
     "result": "거짓",
     "relatedArticleUrl": "https://newstapa.org/article/67Kmz",
-    "originalUrl": "https://www.youtube.com/watch?v=gN3Omx5sqWA&ab_channel=TV%ED%99%8D%EC%B9%B4%EC%BD%9C%EB%9D%BC"
+    "originalUrl": "https://www.youtube.com/live/gN3Omx5sqWA?si=OLrMiqEMPZuTmxic&t=793"
   },
   {
-    "index": 5,
+    "index": 11,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -93,10 +187,10 @@
     ],
     "result": "대체로 거짓",
     "relatedArticleUrl": "https://newstapa.org/article/gfXeu",
-    "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared"
+    "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1202"
   },
   {
-    "index": 6,
+    "index": 12,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -111,7 +205,7 @@
     "originalUrl": ""
   },
   {
-    "index": 7,
+    "index": 13,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -124,10 +218,10 @@
     ],
     "result": "대체로 거짓",
     "relatedArticleUrl": "https://newstapa.org/article/7G340",
-    "originalUrl": "https://www.youtube.com/watch?v=k2IlJGYranI&ab_channel=%EC%8B%9C%EC%82%AC%EC%A0%80%EB%84%90TV"
+    "originalUrl": "https://youtu.be/k2IlJGYranI?si=QMinHX-T47FOXjO_&t=337"
   },
   {
-    "index": 8,
+    "index": 14,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -143,7 +237,7 @@
     "originalUrl": ""
   },
   {
-    "index": 9,
+    "index": 15,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -159,7 +253,7 @@
     "originalUrl": ""
   },
   {
-    "index": 10,
+    "index": 16,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",

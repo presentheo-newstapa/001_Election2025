@@ -10,5 +10,6 @@ export type CardProps = {
   selectedCategory: string,
   selectedLegend: string,
   selectedResult: string,
+  resultList: {name: string, color: string}[],
   handleFilteredData: (category: string, legend: string, result: string) => void;
 }

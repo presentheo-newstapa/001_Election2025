@@ -27,17 +27,28 @@ const partyList = [
   {name: "개혁신당", color: "orange"},
 ]
 const candidateList = [
-  {name: "홍준표", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
+  {name: "이재명", party: "더불어민주당", position: "대구광역시장", formerPosition: "대구광역시장",},
+  {name: "김문수", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
   {name: "이준석", party: "개혁신당", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "전광훈", party: "자유통일당", position: "대구광역시장", formerPosition: "대구광역시장",},
+  {name: "홍준표", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
   {name: "한동훈", party: "국민의힘", position: "대구광역시장", formerPosition: "대구광역시장",},
-  {name: "유정복", party: "국민의힘", position: "인천시장", formerPosition: "대구광역시장",}
+  {name: "유정복", party: "국민의힘", position: "인천시장", formerPosition: "대구광역시장",},
+  {name: "전광훈", party: "자유통일당", position: "대구광역시장", formerPosition: "대구광역시장",}
 ]
 
 const creditList = [
-  {name: "기획", person: "오대양"},
+  {name: "기획", person: "오대양 허현재"},
   {name: "디자인", person: "이도현"},
   {name: "개발", person: "허현재"},
+  {name: "팩트체크팀", person: "최기훈 최승호 김성수 박상희 김주예 신다임"},
+]
+
+const resultList = [
+  {name: "거짓", color: "#666666"},
+  {name: "대체로 거짓", color: "#66668D"},
+  {name: "판단 유보", color: "#6665B3"},
+  {name: "대체로 사실", color: "#6564D9"},
+  {name: "사실", color: "#6463FF"},
 ]
 
 export default function Home() {
@@ -150,10 +161,10 @@ export default function Home() {
                 ease: 'easeInOut'
               }}
             >
-              <div className="absolute top-0 w-full bg-[url(/2025/factcheck2025/images/mainbanner.jpg)] bg-cover lg:bg-contain bg-center">
+              <div className="absolute top-0 w-full bg-[url(/images/mainbanner.jpg)] bg-cover lg:bg-contain bg-center">
                 <Image
                   className="mt-[70px] lg:mt-[96px] mx-auto"
-                  src="/2025/factcheck2025/images/main_banner_logo.png"
+                  src="/images/main_banner_logo.png"
                   alt="2025 대선 팩트체크"
                   width={isMobile ? 260 : 390}
                   height={isMobile ? 95 : 142}
@@ -167,7 +178,7 @@ export default function Home() {
                 <p className="text-sm text-center mt-[15px] text-[#79797A] lg:text-base"><a href="https://newstapa.org/">뉴스타파</a> X <a href="https://withnewstapa.org/kinn/">한국독립언론네트워크 KINN</a></p>
                 <Image
                   className="mt-[30px] mb-[35px] mx-auto animate-bounce"
-                  src="/2025/factcheck2025/images/icon/arrow_down.svg"
+                  src="/images/icon/arrow_down.svg"
                   alt="스크롤을 내려주세요"
                   width={26}
                   height={26}
@@ -184,7 +195,7 @@ export default function Home() {
             <div className="flex justify-between max-w-[1180px] mx-auto">
               <h1 className="cursor-pointer" onClick={() => handleFilteredData("전체", "전체", "전체결과")}>
                 <Image
-                  src={'/2025/factcheck2025/images/header_logo.png'}
+                  src={'/images/header_logo.png'}
                   alt="2025 대선 팩트체크"
                   width={isMobile ? 130 : 280}
                   height={44}
@@ -195,13 +206,13 @@ export default function Home() {
           </div>
 
           {/* 상단 정보 */}
-          <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/2025/factcheck2025/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-[20px]">
+          <div className="max-w-[1180px] mx-auto pt-7 block bg-[url('/images/main_banner_bg.png')] bg-cover bg-no-repeat bg-center lg:mt-6 lg:p-6 lg:flex lg:justify-between lg:border lg:border-[#D9D9D9] lg:rounded-[20px]">
             {/* 전체 보기 */}
             {selectedCategory === "전체" && (
               <div className="p-4 lg:p-8">
                 <Image 
                   className="m-auto cursor-pointer"
-                  src="/2025/factcheck2025/images/all_candidates.png" 
+                  src="/images/all_candidates.png" 
                   alt={selectedLegend} 
                   width={240} 
                   height={60} 
@@ -214,7 +225,7 @@ export default function Home() {
               <div className="p-4 lg:p-8">
                 <Image 
                   className="m-auto cursor-pointer"
-                  src={`/2025/factcheck2025/images/logo/${selectedLegend}.png`} 
+                  src={`/images/logo/${selectedLegend}.png`} 
                   alt={selectedLegend} 
                   width={200} 
                   height={150} 
@@ -230,12 +241,12 @@ export default function Home() {
                   <SafeImage
                     key={selectedLegend}
                     className="cursor-pointer rounded-[20px]"
-                    src={`/2025/factcheck2025/images/candidate/big/${selectedLegend}.png`}
+                    src={`/images/candidate/big/${selectedLegend}.png`}
                     alt={selectedLegend}
                     width={isMobile ? 120 : 150}
                     height={isMobile ? 120 : 150}
                     onClick={() => {handleFilteredData("인물", selectedLegend, "전체결과")}} 
-                    fallbackSrc={'/2025/factcheck2025/images/candidate/def.jpg'}
+                    fallbackSrc={'/images/candidate/def.jpg'}
                   />
                 </div>
                 {/* 정당과 인물 정보 */}
@@ -246,7 +257,7 @@ export default function Home() {
                       <h3>
                         <Image
                           className="object-contain object-left cursor-pointer"
-                          src={`/2025/factcheck2025/images/logo/${categoryFilteredData[0].party}.png`}
+                          src={`/images/logo/${categoryFilteredData[0].party}.png`}
                           alt={categoryFilteredData[0].party}
                           width={80}
                           height={30}
@@ -273,14 +284,14 @@ export default function Home() {
 
             {/* 검증 결과 집계 */}
             <div className="items-center grid grid-cols-5 mt-4">
-              {["거짓","대체로 거짓","판단 유보","대체로 사실","사실"].map((item, index) => (
+              {resultList.map((item, index) => (
                 <div 
                   key={index} 
-                  className={`px-1 pt-1 border rounded-[15px] cursor-pointer ${selectedResult === item ? "border-[#6463FF]" : "border-transparent"} lg:px-2 lg:pt-2`}
-                  onClick={() => {setSelectedResult(item);}}
+                  className={`px-1 pt-1 border rounded-[15px] cursor-pointer ${selectedResult === item.name ? "border-[#6463FF]" : "border-transparent"} lg:px-2 lg:pt-2`}
+                  onClick={() => {setSelectedResult(item.name);}}
                 >
-                  <h3 className="text-sm lg:text-base text-center text-[#79797A]">{item}</h3>
-                  <p className={`text-center font-bold text-[40px] lg:text-[50px] ${selectedResult === item ? "text-[#6463FF]" : ""}`}>{categoryFilteredData.filter(data => data.result === item ).length}</p>
+                  <h3 className="text-sm lg:text-base text-center text-[#79797A]">{item.name}</h3>
+                  <p className={`text-center font-bold text-[40px] lg:text-[50px] ${selectedResult === item.name ? "text-[#6463FF]" : ""}`}>{categoryFilteredData.filter(data => data.result === item.name ).length}</p>
                 </div>
               ))}
             </div>
@@ -316,6 +327,7 @@ export default function Home() {
                     selectedCategory={selectedCategory}
                     selectedLegend={selectedLegend}
                     selectedResult={selectedResult}
+                    resultList={resultList}
                     handleFilteredData={handleFilteredData}
                   />
                 ) : (
@@ -331,6 +343,7 @@ export default function Home() {
                     selectedCategory={selectedCategory}
                     selectedLegend={selectedLegend}
                     selectedResult={selectedResult}
+                    resultList={resultList}
                     handleFilteredData={handleFilteredData}
                   />
                 )}
@@ -340,7 +353,7 @@ export default function Home() {
               <div className="col-span-12 text-center pt-[80px] pb-[160px]">
                 <Image
                   className="m-auto"
-                  src="/2025/factcheck2025/images/icon/no_search_result.png"
+                  src="/images/icon/no_search_result.png"
                   alt="검색 결과가 없습니다."
                   width={300}
                   height={240}
@@ -376,7 +389,7 @@ export default function Home() {
                   >
                     {filterCategory === "인물" && (
                       <div className="bg-white p-4 pb-7 rounded-t-[20px] border border-[#DEDEDE] border-b-0">
-                        <ul className="flex flex-wrap gap-4 justify-center">
+                        <ul className="flex flex-wrap gap-2 justify-center">
                           {candidateList.map((item, index) => (
                             <li 
                               key={index}
@@ -384,7 +397,7 @@ export default function Home() {
                               onClick={() => handleFilteredData("인물", item.name, "전체결과")}
                             >
                               <Image
-                                src={`/2025/factcheck2025/images/candidate/small/${item.name}.png`}
+                                src={`/images/candidate/small/${item.name}.png`}
                                 alt={item.name}
                                 width={80}
                                 height={80}
@@ -432,7 +445,7 @@ export default function Home() {
             <div className="flex justify-center py-8" style={{background: "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F1F1F9 100%)"}}>
               <button className="bg-[#6463FF] p-4 m-auto shadow-md rounded-[15px]" onClick={() => setMobileFilterOpen(!mobileFilterOpen)}>
                 <Image
-                  src={mobileFilterOpen ? "/2025/factcheck2025/images/icon/filter_close.svg" : "/2025/factcheck2025/images/icon/filter_open.svg"}
+                  src={mobileFilterOpen ? "/images/icon/filter_close.svg" : "/images/icon/filter_open.svg"}
                   alt="필터 아이콘"
                   width={23}
                   height={23}

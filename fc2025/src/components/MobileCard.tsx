@@ -16,13 +16,13 @@ const [isOpen, setIsOpen] = useState(false);
             <div className="shrink-0">
                 <SafeImage
                     key={name}
-                    src={`/2025/factcheck2025/images/candidate/small/${name}.png`}
+                    src={`/images/candidate/small/${name}.png`}
                     alt={"인물="+name}
                     width={80}
                     height={80}
                     className="rounded-[10px] overflow-hidden relative"
                     onClick={() => handleFilteredData("인물", name, "전체결과")}
-                    fallbackSrc = {'/2025/factcheck2025/images/candidate/def.jpg'}
+                    fallbackSrc = {'/images/candidate/def.jpg'}
                 />
             </div>
             <div className="grow">
@@ -60,7 +60,7 @@ const [isOpen, setIsOpen] = useState(false);
                                 href={relatedArticleUrl}>관련 기사 보러가기
                                 <Image
                                     className="inline"
-                                    src="/2025/factcheck2025/images/icon/chevron_right.svg"
+                                    src="/images/icon/chevron_right.svg"
                                     alt="오른쪽 화살표"
                                     width={18}
                                     height={18}
@@ -77,7 +77,7 @@ const [isOpen, setIsOpen] = useState(false);
             <button>
                 {isOpen ? "접기" : "더보기"}
                 <Image 
-                    src={isOpen? "/2025/factcheck2025/images/icon/chevron_up.svg" : "/2025/factcheck2025/images/icon/chevron_down.svg"}
+                    src={isOpen? "/images/icon/chevron_up.svg" : "/images/icon/chevron_down.svg"}
                     alt={isOpen? "접기" : "더보기"}
                     width={20}
                     height={17}
