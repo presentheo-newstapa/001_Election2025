@@ -4,6 +4,22 @@
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
+    "claim": "김문수, 민주화운동 보상금 10억 원 수령 거부했다?",
+    "resultDetails": [
+      "5.3 민주항쟁 관련 2년 반 징역…’민주운동관련자’ 자격",
+      "수령 가능 최고액 ‘생활지원금 5천만 원’...’10억 원’은 허위",
+      "보상 신청 기간 당시 국회의원·도지사여서 지급 제외 대상에 해당",
+      "신청 자격 자체가 없는 상태여서 수령 거부했다는 말은 거짓"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/l14BG",
+    "originalUrl": "https://www.youtube.com/live/0k0s6EKMuH0?t=357s"
+  },
+  {
+    "index": 1,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
     "claim": "하루 8시간 일하고 세계적 반도체 기술 앞설 수 없다?",
     "resultDetails": [
       "반도체 매출 기준 '세계 4위' 기업 SK하이닉스",
@@ -16,7 +32,7 @@
     "originalUrl": "https://www.youtube.com/live/EDFhtuK0MVQ?feature=shared&t=2489"
   },
   {
-    "index": 1,
+    "index": 2,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -32,7 +48,7 @@
     "originalUrl": "https://www.youtube.com/live/_pBM17bz5JA?feature=shared&t=3421"
   },
   {
-    "index": 2,
+    "index": 3,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -47,7 +63,7 @@
     "originalUrl": "https://www.youtube.com/live/VQX_SIBcCJU?si=7JGSJBv466UhvsGw&t=1110"
   },
   {
-    "index": 3,
+    "index": 4,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -62,7 +78,7 @@
     "originalUrl": "https://www.youtube.com/live/VfzI7KcQr18?si=21Dxicr1BWq2cPfp&t=2865"
   },
   {
-    "index": 4,
+    "index": 5,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -78,7 +94,7 @@
     "originalUrl": "https://www.youtube.com/live/QYu8Yum_vZM?si=YVEhX8i13R3rpUSC&t=1588"
   },
   {
-    "index": 5,
+    "index": 6,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -94,7 +110,7 @@
     "originalUrl": "https://www.youtube.com/live/IJui47ArUvc?si=iiFrbIR_A9lHaMaE&t=1315"
   },
   {
-    "index": 6,
+    "index": 7,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -110,7 +126,7 @@
     "originalUrl": "https://www.youtube.com/live/GMT3fsE1Zmk?si=SsCBterEDpPzKKhn&t=6598"
   },
   {
-    "index": 7,
+    "index": 8,
     "party": "국민의힘",
     "name": "한동훈",
     "position": "전 대표",
@@ -126,7 +142,7 @@
     "originalUrl": "https://youtu.be/44pLjogh35E?si=eGgmGN41wSVxTfGN&t=695"
   },
   {
-    "index": 8,
+    "index": 9,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -142,7 +158,7 @@
     "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1173"
   },
   {
-    "index": 9,
+    "index": 10,
     "party": "",
     "name": "전광훈",
     "position": "사랑제일교회 목사",
@@ -158,7 +174,7 @@
     "originalUrl": ""
   },
   {
-    "index": 10,
+    "index": 11,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -174,7 +190,7 @@
     "originalUrl": "https://www.youtube.com/live/gN3Omx5sqWA?si=OLrMiqEMPZuTmxic&t=793"
   },
   {
-    "index": 11,
+    "index": 12,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -190,7 +206,7 @@
     "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1202"
   },
   {
-    "index": 12,
+    "index": 13,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -205,7 +221,7 @@
     "originalUrl": ""
   },
   {
-    "index": 13,
+    "index": 14,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -221,7 +237,7 @@
     "originalUrl": "https://youtu.be/k2IlJGYranI?si=QMinHX-T47FOXjO_&t=337"
   },
   {
-    "index": 14,
+    "index": 15,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -237,7 +253,7 @@
     "originalUrl": ""
   },
   {
-    "index": 15,
+    "index": 16,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -253,7 +269,7 @@
     "originalUrl": ""
   },
   {
-    "index": 16,
+    "index": 17,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
