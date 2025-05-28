@@ -4,6 +4,133 @@
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
+    "claim": "김문수, 부정선거 의혹 제기한 적 없다?",
+    "resultDetails": [
+      "2020년 총선 후 \"선거 부정 계속 드러나\" 페이스북 글 게시",
+      "총선 부정선거 의혹 제기하는 기독자유통일당 기자회견 참석",
+      "고용노동부 장관 당시, 대선 부정선거 의혹에 \"정당한 의문\"",
+      "국민의힘 대선 후보 된 뒤 \"사전투표제 폐지하겠다\" 공약"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/YK7eF",
+    "originalUrl": "https://www.youtube.com/live/cBsp9hLrJM4?feature=shared&t=1251"
+  },
+  {
+    "index": 1,
+    "party": "더불어민주당",
+    "name": "이재명",
+    "position": "대선후보",
+    "claim": "이재명, 투·개표 조작 부정선거 얘기한 것 아니다?",
+    "resultDetails": [
+      "2017년 1월 성남시장 시절, 페이스북과 트위터(X)에",
+      "국가기관 선거개입과 개표부정 동시 언급",
+      "개표 조작, 대선 무효 주장했던 강동원 의원 응원글 게시",
+      "선관위 반박자료 내고, 김어준은 이재명 출연시킬 정도로 화제"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/N5wAm",
+    "originalUrl": "https://www.youtube.com/live/cx8jxiPD7x4?si=XqbNAlXHXjQL7DPx&t=1360"
+  },
+  {
+    "index": 2,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "김문수, 내가 민주노총ㆍ전교조 만들었다?",
+    "resultDetails": [
+      "민주노총 준비위 1994년 11월 활동 시작",
+      "김문수 1994년 3월 민주자유당 입당",
+      "이석행 전 민주노총 위원장 \"말도 안되는 소리\"",
+      "김진경 초대 전교조 정책실장 \"김문수 거짓말\""
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/N7EPB",
+    "originalUrl": "https://www.youtube.com/watch?v=t7UBahFA5dY&t=74s&ab_channel=CharityBaptistChurch"
+  },
+  {
+    "index": 3,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "이재명 후보가 과거 ‘성소수자 30% 공공기관 의무 채용’ 공약?",
+    "resultDetails": [
+      "2017년 민주당 경선후보 시절 해당 발언을 했던 것은 사실",
+      "맥락상 '성소수자'(LGBTQIA+) 아닌 '여성' 의미",
+      "당시 이재명, “‘여성’을 ‘성소수자’로 잘못 말한 것” 해명",
+      "김문수 후보도 '양성평등 채용 목표제' 공약 내걸어"
+    ],
+    "result": "대체로 거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/c5sGN",
+    "originalUrl": "https://youtu.be/bwWYukLPyp0?si=jKhh6bdMuJzKDewL&t=430"
+  },
+  {
+    "index": 4,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "차별금지법 제정되면 성범죄자가 초등학교 수위를 해도 막을 수 없다? \r\n",
+    "resultDetails": [
+      "현행 법만으로도 '일정 기간' 국가공무원 임용 제한 가능",
+      "-공무원법, 청소년성보호법, 아동복지법 상 학교 취업 불가능",
+      "차별금지법안, '다른 법이 규정한 취업 제한 사유'는 '합리적 차별'로 인정"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/c5sGN",
+    "originalUrl": "https://youtu.be/bwWYukLPyp0?si=NcDdQrq1LKBlVHuh&t=461"
+  },
+  {
+    "index": 5,
+    "party": "더불어민주당",
+    "name": "이재명",
+    "position": "대선후보",
+    "claim": "호주에서는 투표하는 사람한테 인센티브를 준다?\r",
+    "resultDetails": [
+      "호주는 대표적인 의무투표제 국가...인센티브제 없어",
+      "정당한 사유 없이 투표 불참하면 벌금 부과",
+      "투표하면 금전적 인센티브 또는 수당 주는 나라 없어",
+      "호주, 벨기에 등 20여 개국 투표 불참 벌금제 운영 중"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/7-KPo",
+    "originalUrl": "https://www.youtube.com/live/qNBjuVh3QJY?si=mtb9KUZzcGjIteb_&t=1432"
+  },
+  {
+    "index": 6,
+    "party": "개혁신당",
+    "name": "이준석",
+    "position": "대선후보",
+    "claim": "풍력발전은 중국 위한 것이다?",
+    "resultDetails": [
+      "\"풍력 터빈 국내 업체 점유율 28% 불과\"...풍력은 중국 위한 것?",
+      "산업통상자원부 '발전소 건설사업 추진 현황' 자료 보니",
+      "-65개 풍력 발전 사업 중 중국산 터빈 사용 계획은 단 2개",
+      "-유럽산 41개, 한국산 20개, 중국산 2개, 미국산 1개 순"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/PHQ7c",
+    "originalUrl": "https://www.youtube.com/live/Wxr63VlKJ74?t=4193s"
+  },
+  {
+    "index": 7,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "중대재해법은 아무것도 모르는 사장·회장 무조건 구속하는 악법?",
+    "resultDetails": [
+      "사전 의무조치 이행한 사업주는 사망 재해 발생해도 ‘면책’",
+      "중대재해법 시행 이후 사업주 최종 징역 선고 고작 2건 뿐",
+      "매년 사망자 감소, 소규모 사업장 감소폭 더 커…’예방효과’ 확인",
+      "“무조건 구속”, “소규모 사업장 적용은 잘못” 모두 근거 없어"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/xND_U",
+    "originalUrl": "https://youtu.be/YzGgEi95mBk?si=su5RaJYdB4v-ZE58&t=323"
+  },
+  {
+    "index": 8,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
     "claim": "김문수, 민주화운동 보상금 10억 원 수령 거부했다?",
     "resultDetails": [
       "5.3 민주항쟁 관련 2년 반 징역…’민주운동관련자’ 자격",
@@ -16,23 +143,7 @@
     "originalUrl": "https://www.youtube.com/live/0k0s6EKMuH0?t=357s"
   },
   {
-    "index": 1,
-    "party": "국민의힘",
-    "name": "김문수",
-    "position": "대선후보",
-    "claim": "하루 8시간 일하고 세계적 반도체 기술 앞설 수 없다?",
-    "resultDetails": [
-      "반도체 매출 기준 '세계 4위' 기업 SK하이닉스",
-      "- '평균 주 43시간 근무'에 주말, 휴일 근무도 권장 안 해",
-      "- 구성원 행복·만족도 상승 위해 선택적 근로시간제 시행",
-      "- 최근 실적은 주 64시간 특별연장근로하는 삼성전자 앞질러"
-    ],
-    "result": "거짓",
-    "relatedArticleUrl": "https://newstapa.org/article/GiABU",
-    "originalUrl": "https://www.youtube.com/live/EDFhtuK0MVQ?feature=shared&t=2489"
-  },
-  {
-    "index": 2,
+    "index": 9,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -48,7 +159,23 @@
     "originalUrl": "https://www.youtube.com/live/_pBM17bz5JA?feature=shared&t=3421"
   },
   {
-    "index": 3,
+    "index": 10,
+    "party": "국민의힘",
+    "name": "김문수",
+    "position": "대선후보",
+    "claim": "하루 8시간 일하고 세계적 반도체 기술 앞설 수 없다?",
+    "resultDetails": [
+      "반도체 매출 기준 '세계 4위' 기업 SK하이닉스",
+      "- '평균 주 43시간 근무'에 주말, 휴일 근무도 권장 안 해",
+      "- 구성원 행복·만족도 상승 위해 선택적 근로시간제 시행",
+      "- 최근 실적은 주 64시간 특별연장근로하는 삼성전자 앞질러"
+    ],
+    "result": "거짓",
+    "relatedArticleUrl": "https://newstapa.org/article/GiABU",
+    "originalUrl": "https://www.youtube.com/live/EDFhtuK0MVQ?feature=shared&t=2489"
+  },
+  {
+    "index": 11,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -63,7 +190,7 @@
     "originalUrl": "https://www.youtube.com/live/VQX_SIBcCJU?si=7JGSJBv466UhvsGw&t=1110"
   },
   {
-    "index": 4,
+    "index": 12,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -78,7 +205,7 @@
     "originalUrl": "https://www.youtube.com/live/VfzI7KcQr18?si=21Dxicr1BWq2cPfp&t=2865"
   },
   {
-    "index": 5,
+    "index": 13,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -94,7 +221,7 @@
     "originalUrl": "https://www.youtube.com/live/QYu8Yum_vZM?si=YVEhX8i13R3rpUSC&t=1588"
   },
   {
-    "index": 6,
+    "index": 14,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -110,7 +237,7 @@
     "originalUrl": "https://www.youtube.com/live/IJui47ArUvc?si=iiFrbIR_A9lHaMaE&t=1315"
   },
   {
-    "index": 7,
+    "index": 15,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -126,7 +253,7 @@
     "originalUrl": "https://www.youtube.com/live/GMT3fsE1Zmk?si=SsCBterEDpPzKKhn&t=6598"
   },
   {
-    "index": 8,
+    "index": 16,
     "party": "국민의힘",
     "name": "한동훈",
     "position": "전 대표",
@@ -142,7 +269,7 @@
     "originalUrl": "https://youtu.be/44pLjogh35E?si=eGgmGN41wSVxTfGN&t=695"
   },
   {
-    "index": 9,
+    "index": 17,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -158,7 +285,7 @@
     "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1173"
   },
   {
-    "index": 10,
+    "index": 18,
     "party": "",
     "name": "전광훈",
     "position": "사랑제일교회 목사",
@@ -174,7 +301,7 @@
     "originalUrl": ""
   },
   {
-    "index": 11,
+    "index": 19,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -190,7 +317,7 @@
     "originalUrl": "https://www.youtube.com/live/gN3Omx5sqWA?si=OLrMiqEMPZuTmxic&t=793"
   },
   {
-    "index": 12,
+    "index": 20,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -206,7 +333,7 @@
     "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1202"
   },
   {
-    "index": 13,
+    "index": 21,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -221,7 +348,7 @@
     "originalUrl": ""
   },
   {
-    "index": 14,
+    "index": 22,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -237,7 +364,7 @@
     "originalUrl": "https://youtu.be/k2IlJGYranI?si=QMinHX-T47FOXjO_&t=337"
   },
   {
-    "index": 15,
+    "index": 23,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -253,7 +380,7 @@
     "originalUrl": ""
   },
   {
-    "index": 16,
+    "index": 24,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -269,7 +396,7 @@
     "originalUrl": ""
   },
   {
-    "index": 17,
+    "index": 25,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
