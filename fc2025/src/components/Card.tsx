@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CardProps } from "@/types/props";
 import SafeImage from "./SafeImage";
 
-export default function Card({name, party, claim, result, resultDetails, position, relatedArticleUrl, selectedResult, originalUrl, resultList, handleFilteredData}: CardProps){
+export default function Card({name, party, claim, result, resultDetails, position, relatedArticleUrl, selectedResult, originalUrl, partyList, resultList, handleFilteredData}: CardProps){
 
   return (
     <div className="group bg-white border border-[#D9D9D9] hover:border-[#6463FF] rounded-[20px] hover:shadow-[0_0_30px_rgba(100,99,255,0.2)] transition-all duration-300 ease-in-out">
@@ -28,12 +28,12 @@ export default function Card({name, party, claim, result, resultDetails, positio
             {/* 소속 정당 */}
             <div>
               {party !== "" && (
-                <h3 className="relative w-full h-[15px]">
+                <h3 className={`relative w-full h-[${partyList.find((item) => item.name === party)?.height}px]`}>
                   <Image
                     src={`/2025/factcheck2025/images/logo/${party}.png`}
                     alt={party}
                     fill
-                    sizes="(max-width: 320px) 15px"
+                    sizes="(max-width: 320px) 20px"
                     className="object-contain object-left cursor-pointer"
                     onClick={() => handleFilteredData("정당", party, selectedResult)}
                   />

@@ -10,6 +10,7 @@ export type CardProps = {
   selectedCategory: string,
   selectedLegend: string,
   selectedResult: string,
+  partyList: {name: string, height: number}[],
   resultList: {name: string, color: string}[],
   handleFilteredData: (category: string, legend: string, result: string) => void;
 }

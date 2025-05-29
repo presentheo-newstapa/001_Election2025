@@ -22,14 +22,16 @@ const cardVariants = {
 
 // 정당과 후보 목록
 const partyList = [
-  {name: "더불어민주당", color: "blue"},
-  {name: "국민의힘", color: "red"},
-  {name: "개혁신당", color: "orange"},
+  {name: "더불어민주당", height: 15},
+  {name: "국민의힘", height: 15},
+  {name: "개혁신당", height: 15},
+  {name: "민주노동당", height: 10},
 ]
 const candidateList = [
   {name: "이재명", party: "더불어민주당", final: true },
   {name: "김문수", party: "국민의힘", final: true },
   {name: "이준석", party: "개혁신당", final: true },
+  {name: "권영국", party: "민주노동당", final: true },
   {name: "홍준표", party: "국민의힘", final: false },
   {name: "한동훈", party: "국민의힘", final: false },
   {name: "유정복", party: "국민의힘", final: false },
@@ -123,14 +125,7 @@ export default function Home() {
         document.body.style.overflow = "auto"
       }
     }, 600)
-  })
-
-  // 커스텀 훅
-  // useEffect(() => {
-  //   if (elementRef.current) {
-  //     const height = elementRef.current.offsetHeight;
-  //   }
-  // }, []);
+  }, [isInitialScreen])
 
   // 카테고리 버튼 클래스네임
   const categoryButtonClassName = (category: string) => {
@@ -327,11 +322,12 @@ export default function Home() {
                     selectedCategory={selectedCategory}
                     selectedLegend={selectedLegend}
                     selectedResult={selectedResult}
+                    partyList={partyList}
                     resultList={resultList}
                     handleFilteredData={handleFilteredData}
-                  />
-                ) : (
-                  <Card
+                    />
+                  ) : (
+                    <Card
                     name={item.name}
                     party={item.party}
                     claim={item.claim}
@@ -343,6 +339,7 @@ export default function Home() {
                     selectedCategory={selectedCategory}
                     selectedLegend={selectedLegend}
                     selectedResult={selectedResult}
+                    partyList={partyList}
                     resultList={resultList}
                     handleFilteredData={handleFilteredData}
                   />
@@ -390,7 +387,7 @@ export default function Home() {
                     {filterCategory === "인물" && (
                       <div className="bg-white p-4 pb-7 rounded-t-[20px] border border-[#DEDEDE] border-b-0">
                         {/* 인물별 보기 리스트 */}
-                        <ul className="flex flex-wrap gap-2 justify-center">
+                        <ul className="flex flex-nowrap gap-2 justify-start">
                           {candidateList.map((item, index) => (
                             <li 
                               key={index}

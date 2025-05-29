@@ -1,6 +1,39 @@
 [
   {
     "index": 0,
+    "party": "더불어민주당",
+    "name": "이재명",
+    "position": "대선후보",
+    "claim": " 병력 동원해 국회 장악한 건 명확한 내란 행위?",
+    "resultDetails": [
+      "‘5.18 내란’ 대법원 판결 (1997년)",
+      "-내란은 국헌을 문란할 목적의 폭동 행위",
+      "-헌법에 의한 국가기관인 국회를 강압, 권능 못하게 하면 국헌 문란",
+      "-다수가 한 지역의 평온 해치는 폭동하면 내란 요건 충족",
+      "-비상계엄 전국확대는 폭동, 전국의 평온 해칠 정도"
+    ],
+    "result": "사실",
+    "relatedArticleUrl": "",
+    "originalUrl": "https://www.youtube.com/live/aQQZkq37x94?t=3903s"
+  },
+  {
+    "index": 1,
+    "party": "민주노동당",
+    "name": "권영국",
+    "position": "대선후보",
+    "claim": "대통령이 국회 해산권 가진 나라는 없다?",
+    "resultDetails": [
+      "대통령에 국회 해산권 부여한 경우는 이원집정부제 국가 사례",
+      "대통령제 국가에서 대통령에게 의회해산권 부여한 경우는 없어",
+      "미국, 한국, 멕시코, 브라질 등",
+      "권영국과 이준석 두 후보의 질의 응답은 대통령제 전제로 한 것"
+    ],
+    "result": "대체로 사실",
+    "relatedArticleUrl": "https://newstapa.org/article/BOwOC",
+    "originalUrl": "https://www.youtube.com/live/6k_TZFrADUs?si=Rf7ISbPD3ubBB9Ra&t=2310"
+  },
+  {
+    "index": 2,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -16,7 +49,7 @@
     "originalUrl": "https://www.youtube.com/live/cBsp9hLrJM4?feature=shared&t=1251"
   },
   {
-    "index": 1,
+    "index": 3,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -32,7 +65,7 @@
     "originalUrl": "https://www.youtube.com/live/cx8jxiPD7x4?si=XqbNAlXHXjQL7DPx&t=1360"
   },
   {
-    "index": 2,
+    "index": 4,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -48,7 +81,7 @@
     "originalUrl": "https://www.youtube.com/watch?v=t7UBahFA5dY&t=74s&ab_channel=CharityBaptistChurch"
   },
   {
-    "index": 3,
+    "index": 5,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -64,7 +97,7 @@
     "originalUrl": "https://youtu.be/bwWYukLPyp0?si=jKhh6bdMuJzKDewL&t=430"
   },
   {
-    "index": 4,
+    "index": 6,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -79,7 +112,7 @@
     "originalUrl": "https://youtu.be/bwWYukLPyp0?si=NcDdQrq1LKBlVHuh&t=461"
   },
   {
-    "index": 5,
+    "index": 7,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -95,7 +128,7 @@
     "originalUrl": "https://www.youtube.com/live/qNBjuVh3QJY?si=mtb9KUZzcGjIteb_&t=1432"
   },
   {
-    "index": 6,
+    "index": 8,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -111,7 +144,7 @@
     "originalUrl": "https://www.youtube.com/live/Wxr63VlKJ74?t=4193s"
   },
   {
-    "index": 7,
+    "index": 9,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -127,7 +160,7 @@
     "originalUrl": "https://youtu.be/YzGgEi95mBk?si=su5RaJYdB4v-ZE58&t=323"
   },
   {
-    "index": 8,
+    "index": 10,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -143,7 +176,7 @@
     "originalUrl": "https://www.youtube.com/live/0k0s6EKMuH0?t=357s"
   },
   {
-    "index": 9,
+    "index": 11,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -159,7 +192,7 @@
     "originalUrl": "https://www.youtube.com/live/_pBM17bz5JA?feature=shared&t=3421"
   },
   {
-    "index": 10,
+    "index": 12,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -175,7 +208,7 @@
     "originalUrl": "https://www.youtube.com/live/EDFhtuK0MVQ?feature=shared&t=2489"
   },
   {
-    "index": 11,
+    "index": 13,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -190,7 +223,7 @@
     "originalUrl": "https://www.youtube.com/live/VQX_SIBcCJU?si=7JGSJBv466UhvsGw&t=1110"
   },
   {
-    "index": 12,
+    "index": 14,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -205,7 +238,7 @@
     "originalUrl": "https://www.youtube.com/live/VfzI7KcQr18?si=21Dxicr1BWq2cPfp&t=2865"
   },
   {
-    "index": 13,
+    "index": 15,
     "party": "더불어민주당",
     "name": "이재명",
     "position": "대선후보",
@@ -221,7 +254,7 @@
     "originalUrl": "https://www.youtube.com/live/QYu8Yum_vZM?si=YVEhX8i13R3rpUSC&t=1588"
   },
   {
-    "index": 14,
+    "index": 16,
     "party": "국민의힘",
     "name": "김문수",
     "position": "대선후보",
@@ -237,7 +270,7 @@
     "originalUrl": "https://www.youtube.com/live/IJui47ArUvc?si=iiFrbIR_A9lHaMaE&t=1315"
   },
   {
-    "index": 15,
+    "index": 17,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -253,7 +286,7 @@
     "originalUrl": "https://www.youtube.com/live/GMT3fsE1Zmk?si=SsCBterEDpPzKKhn&t=6598"
   },
   {
-    "index": 16,
+    "index": 18,
     "party": "국민의힘",
     "name": "한동훈",
     "position": "전 대표",
@@ -269,7 +302,7 @@
     "originalUrl": "https://youtu.be/44pLjogh35E?si=eGgmGN41wSVxTfGN&t=695"
   },
   {
-    "index": 17,
+    "index": 19,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -285,7 +318,7 @@
     "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1173"
   },
   {
-    "index": 18,
+    "index": 20,
     "party": "",
     "name": "전광훈",
     "position": "사랑제일교회 목사",
@@ -301,7 +334,7 @@
     "originalUrl": ""
   },
   {
-    "index": 19,
+    "index": 21,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -317,7 +350,7 @@
     "originalUrl": "https://www.youtube.com/live/gN3Omx5sqWA?si=OLrMiqEMPZuTmxic&t=793"
   },
   {
-    "index": 20,
+    "index": 22,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -333,7 +366,7 @@
     "originalUrl": "https://youtu.be/Th8DOtWr-sQ?feature=shared&t=1202"
   },
   {
-    "index": 21,
+    "index": 23,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -348,7 +381,7 @@
     "originalUrl": ""
   },
   {
-    "index": 22,
+    "index": 24,
     "party": "개혁신당",
     "name": "이준석",
     "position": "대선후보",
@@ -364,7 +397,7 @@
     "originalUrl": "https://youtu.be/k2IlJGYranI?si=QMinHX-T47FOXjO_&t=337"
   },
   {
-    "index": 23,
+    "index": 25,
     "party": "국민의힘",
     "name": "유정복",
     "position": "인천시장",
@@ -380,7 +413,7 @@
     "originalUrl": ""
   },
   {
-    "index": 24,
+    "index": 26,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
@@ -396,7 +429,7 @@
     "originalUrl": ""
   },
   {
-    "index": 25,
+    "index": 27,
     "party": "국민의힘",
     "name": "홍준표",
     "position": "전 대구시장",
